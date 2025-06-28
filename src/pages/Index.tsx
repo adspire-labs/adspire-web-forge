@@ -48,12 +48,12 @@ const Index = () => {
               Creativity that Converts. Execution that Inspires.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
-              <Button asChild size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
+              <Button asChild size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto btn-hover">
                 <Link to="/services">
                   Explore Services <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
+              <Button asChild variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto btn-hover">
                 <Link to="/courses">
                   Join a Course
                 </Link>
@@ -98,7 +98,7 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-10 md:mt-12">
-            <Button asChild variant="outline" size="lg" className="px-6 md:px-8">
+            <Button asChild variant="outline" size="lg" className="px-6 md:px-8 btn-hover">
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
@@ -128,7 +128,7 @@ const Index = () => {
                   <span className="text-base md:text-lg text-gray-700">Practical, Job-Ready Skills</span>
                 </div>
               </div>
-              <Button asChild size="lg" className="w-full sm:w-auto">
+              <Button asChild size="lg" className="w-full sm:w-auto btn-hover">
                 <Link to="/courses">Explore Courses</Link>
               </Button>
             </div>
@@ -153,11 +153,11 @@ const Index = () => {
             Whether you're a business looking to grow or someone eager to learn new skills, we're here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <Button asChild size="lg" variant="secondary" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
+            <Button asChild size="lg" variant="secondary" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto btn-hover">
               <Link to="/contact">Contact Us</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto text-white border-white hover:bg-white hover:text-primary">
-              <Link to="/portfolio">View Our Work</Link>
+            <Button asChild size="lg" variant="outline" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto text-white border-white hover:bg-white hover:text-primary btn-hover">
+              <Link to="/about">View Our Work</Link>
             </Button>
           </div>
         </div>

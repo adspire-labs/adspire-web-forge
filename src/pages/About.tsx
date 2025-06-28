@@ -1,5 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Users, Award, Target, Lightbulb, HandHeart, BookOpen, Trophy, MapPin, Monitor, Smartphone, Video, Palette, Building, GraduationCap, Leaf, Heart } from "lucide-react";
 
 const About = () => {
   const team = [
@@ -7,19 +8,77 @@ const About = () => {
       name: "Saroj Pokhrel",
       role: "Founder",
       description: "Visionary leader driving creative excellence and business growth",
-      image: "👨‍💼"
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
     },
     {
       name: "Sandip Bhusal",
       role: "Chief Marketing Officer",
       description: "Strategic marketing expert with deep industry knowledge",
-      image: "👨‍💻"
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
     },
     {
       name: "Riya",
       role: "Chief Operating Officer",
       description: "Operations specialist ensuring seamless project delivery",
-      image: "👩‍💼"
+      image: "https://images.unsplash.com/photo-1494790108755-2616b332c1ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    }
+  ];
+
+  const partners = [
+    {
+      name: "Cloth & Food Bank Nepal",
+      description: "Social initiative providing essential items to communities in need",
+      category: "Non-Profit",
+      icon: Heart
+    },
+    {
+      name: "Siddhartha E-Business School",
+      description: "Educational institution focusing on digital business and entrepreneurship",
+      category: "Education",
+      icon: GraduationCap
+    },
+    {
+      name: "Nepathya College",
+      description: "Academic institution committed to quality higher education",
+      category: "Education", 
+      icon: BookOpen
+    },
+    {
+      name: "Organic Divine Group",
+      description: "Leading organic products company promoting sustainable living",
+      category: "Business",
+      icon: Leaf
+    }
+  ];
+
+  const clients = [
+    "Organic Divine Group",
+    "Samragyee Nirman Sewa", 
+    "4D Architect",
+    "Mansoon Ply",
+    "Build Sansar Nepal"
+  ];
+
+  const services = [
+    {
+      title: "Website Development",
+      description: "Modern, responsive websites",
+      icon: Monitor
+    },
+    {
+      title: "Video Production", 
+      description: "Reels and storytelling ads",
+      icon: Video
+    },
+    {
+      title: "Graphic Design",
+      description: "Branding and visual identity",
+      icon: Palette
+    },
+    {
+      title: "Digital Marketing",
+      description: "Social media and online campaigns",
+      icon: Smartphone
     }
   ];
 
@@ -80,7 +139,13 @@ const About = () => {
             {team.map((member, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
-                  <div className="text-6xl mb-4">{member.image}</div>
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <CardTitle className="text-primary">{member.name}</CardTitle>
                   <CardDescription className="text-accent font-semibold">{member.role}</CardDescription>
                 </CardHeader>
@@ -103,32 +168,99 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">🎯</span>
+                <Target className="text-white h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Excellence</h3>
               <p className="text-gray-600">We strive for excellence in every project, delivering quality that exceeds expectations.</p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">💡</span>
+                <Lightbulb className="text-white h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Innovation</h3>
               <p className="text-gray-600">We embrace new technologies and creative approaches to solve complex challenges.</p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">🤝</span>
+                <HandHeart className="text-white h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Partnership</h3>
               <p className="text-gray-600">We build lasting relationships with our clients, partners, and students.</p>
             </div>
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-light-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">📚</span>
+                <BookOpen className="text-white h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Education</h3>
               <p className="text-gray-600">We believe in empowering others through knowledge and practical skills.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Work</h2>
+            <p className="text-lg text-gray-600">Creative solutions across multiple disciplines</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {services.map((service, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+                <CardHeader>
+                  <service.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <CardTitle className="text-primary">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{service.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          {/* Client List */}
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-primary mb-6">Our Clients</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              {clients.map((client, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                  <p className="font-semibold text-primary">{client}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Partners</h2>
+            <p className="text-lg text-gray-600">Organizations we're proud to work alongside</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {partners.map((partner, index) => (
+              <Card key={index} className="hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                      <partner.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-primary">{partner.name}</CardTitle>
+                      <span className="bg-light-accent text-white px-3 py-1 rounded-full text-sm">
+                        {partner.category}
+                      </span>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-lg">{partner.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -138,7 +270,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-3 mb-6">
-              <span className="text-2xl mr-3">🏆</span>
+              <Trophy className="h-6 w-6 mr-3" />
               <span className="font-semibold">Achievement Highlight</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Business Plan Competition Success</h2>
@@ -158,7 +290,7 @@ const About = () => {
             <p className="text-lg text-gray-600">Located in the heart of Butwal</p>
           </div>
           <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto text-center">
-            <div className="text-4xl mb-4">📍</div>
+            <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-primary mb-4">Adspire Labs</h3>
             <p className="text-lg text-gray-600 mb-4">Butwal-11, Kalikanagar</p>
             <p className="text-lg text-gray-600 mb-6">📞 9845323733</p>
