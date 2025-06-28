@@ -119,18 +119,6 @@ const Blog = () => {
           </div>
         </div>
       </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Stay Updated</h2>
-          <p className="text-xl mb-8">Get the latest insights and tips delivered to your inbox</p>
-          <div className="bg-white rounded-lg p-6 max-w-md mx-auto">
-            <p className="text-gray-600 mb-4">Subscribe to our newsletter</p>
-            <p className="text-sm text-gray-500">[Newsletter signup form to be added]</p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

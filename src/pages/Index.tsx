@@ -1,107 +1,105 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight, Play, Users, Award, Zap } from "lucide-react";
 
 const Index = () => {
   const services = [
     {
       title: "Website Development",
       description: "Modern, responsive websites that convert visitors into customers",
-      icon: "🌐"
+      icon: "💻"
     },
     {
       title: "Digital Marketing",
-      description: "Strategic campaigns that grow your brand and increase sales",
+      description: "Strategic campaigns that drive real business growth",
       icon: "📱"
     },
     {
-      title: "Graphic Design",
-      description: "Visual identity that makes your brand memorable and professional",
-      icon: "🎨"
-    },
-    {
       title: "Video Production",
-      description: "Compelling video content that tells your story and engages audiences",
+      description: "Compelling visual stories that engage your audience",
       icon: "🎬"
+    },
+    {
+      title: "Graphic Design",
+      description: "Brand identity that makes you stand out",
+      icon: "🎨"
     }
   ];
 
-  const courses = [
-    {
-      title: "Digital Marketing Course",
-      duration: "2 months",
-      description: "Master Canva, CapCut, AI tools, and Meta Ads",
-      icon: "📊"
-    },
-    {
-      title: "Video Editing Course",
-      duration: "2.5 months",
-      description: "Professional video editing with DaVinci Resolve",
-      icon: "✂️"
-    },
-    {
-      title: "Filmmaking Course",
-      duration: "5 months",
-      description: "Complete filmmaking and video production training",
-      icon: "🎥"
-    }
-  ];
-
-  const partners = [
-    "Cloth & Food Bank Nepal",
-    "Siddhartha E-Business School",
-    "Nepathya College",
-    "Organic Divine Group"
+  const stats = [
+    { number: "50+", label: "Projects Completed" },
+    { number: "30+", label: "Happy Clients" },
+    { number: "200+", label: "Students Trained" },
+    { number: "3", label: "Years Experience" }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-accent to-secondary text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Creative Agency in Butwal<br />
-              <span className="text-light-accent">That Builds Brands That Inspire</span>
+      <section className="relative bg-gradient-to-br from-white to-gray-50 pt-20 pb-32 overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+              Creative Agency in <span className="text-primary">Butwal</span> That Builds Brands That <span className="text-primary">Inspire</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+            <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
               Creativity that Converts. Execution that Inspires.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-                <Link to="/services">Explore Services</Link>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button asChild size="lg" className="text-lg px-8 py-6">
+                <Link to="/services">
+                  Explore Services <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                <Link to="/courses">Join a Course</Link>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
+                <Link to="/courses">
+                  Join a Course
+                </Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-20 bg-gray-50">
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Services</h2>
-            <p className="text-lg text-gray-600">Professional solutions for your business growth</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.number}</div>
+                <div className="text-gray-600 text-lg">{stat.label}</div>
+              </div>
+            ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        </div>
+      </section>
+
+      {/* Services Preview */}
+      <section className="py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What We Do</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We help businesses grow through strategic digital solutions and creative excellence
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="text-center">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <CardTitle className="text-primary">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-center">{service.description}</CardDescription>
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white">
+                <CardContent className="p-8 text-center">
+                  <div className="text-4xl mb-6">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Button asChild className="bg-primary hover:bg-accent">
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg">
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
@@ -109,127 +107,54 @@ const Index = () => {
       </section>
 
       {/* Courses Preview */}
-      <section className="py-20">
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Learn with Us</h2>
-            <p className="text-lg text-gray-600">Professional courses designed for real-world success</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {courses.map((course, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <div className="text-3xl">{course.icon}</div>
-                    <span className="bg-light-accent text-white px-3 py-1 rounded-full text-sm">
-                      {course.duration}
-                    </span>
-                  </div>
-                  <CardTitle className="text-primary">{course.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{course.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Button asChild className="bg-primary hover:bg-accent">
-              <Link to="/courses">Explore Courses</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Partners</h2>
-            <p className="text-lg text-gray-600">Trusted by leading organizations</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {partners.map((partner, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <p className="text-center font-medium text-gray-800">{partner}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Learn From Industry Experts</h2>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Master in-demand skills with hands-on training programs designed for the modern digital landscape.
+              </p>
+              <div className="space-y-6 mb-8">
+                <div className="flex items-center">
+                  <Users className="text-primary mr-4 h-6 w-6" />
+                  <span className="text-lg text-gray-700">200+ Students Trained</span>
+                </div>
+                <div className="flex items-center">
+                  <Award className="text-primary mr-4 h-6 w-6" />
+                  <span className="text-lg text-gray-700">Industry-Recognized Certificates</span>
+                </div>
+                <div className="flex items-center">
+                  <Zap className="text-primary mr-4 h-6 w-6" />
+                  <span className="text-lg text-gray-700">Practical, Job-Ready Skills</span>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">What Our Clients Say</h2>
-            <p className="text-lg text-gray-600">Success stories from businesses we've helped grow</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="bg-gradient-to-br from-primary to-accent text-white">
-              <CardContent className="p-6">
-                <p className="mb-4">"Adspire Labs transformed our online presence completely. Their creative approach and professional execution exceeded our expectations."</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary font-bold mr-3">
-                    O
-                  </div>
-                  <div>
-                    <p className="font-semibold">Organic Divine Group</p>
-                    <p className="text-sm opacity-90">Client</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <p className="mb-4 text-gray-600">"The video editing course was incredibly practical. I learned industry-standard techniques that I use in my work every day."</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3">
-                    S
-                  </div>
-                  <div>
-                    <p className="font-semibold">Course Student</p>
-                    <p className="text-sm text-gray-500">Video Editing Graduate</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6">
-                <p className="mb-4 text-gray-600">"Professional service, creative solutions, and excellent results. Adspire Labs is our go-to creative partner."</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold mr-3">
-                    A
-                  </div>
-                  <div>
-                    <p className="font-semibold">4D Architect</p>
-                    <p className="text-sm text-gray-500">Client</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="text-center mt-8">
-            <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-              <a href="https://maps.app.goo.gl/fPtd1fk99duGSgW7A" target="_blank" rel="noopener noreferrer">
-                View Google Reviews
-              </a>
-            </Button>
+              <Button asChild size="lg">
+                <Link to="/courses">Explore Courses</Link>
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="aspect-video bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center">
+                <Play className="text-white h-16 w-16" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
-          <p className="text-xl mb-8">Whether you need creative services or want to learn new skills, we're here to help.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-              <Link to="/contact">Contact Now</Link>
+      <section className="py-32 bg-gradient-to-r from-primary to-secondary text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Get Started?</h2>
+          <p className="text-xl mb-12 opacity-90">
+            Whether you're a business looking to grow or someone eager to learn new skills, we're here to help.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6">
+              <Link to="/contact">Contact Us</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              <Link to="/courses">Join Course</Link>
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 text-white border-white hover:bg-white hover:text-primary">
+              <Link to="/portfolio">View Our Work</Link>
             </Button>
           </div>
         </div>
