@@ -1,26 +1,51 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Award, Target, Lightbulb, HandHeart, BookOpen, Trophy, MapPin, Monitor, Smartphone, Video, Palette, Building, GraduationCap, Leaf, Heart } from "lucide-react";
+import { Users, Target, Lightbulb, Heart, GraduationCap, Building, Handshake, Trophy } from "lucide-react";
 
 const About = () => {
   const team = [
     {
-      name: "Saroj Pokhrel",
-      role: "Founder",
-      description: "Visionary leader driving creative excellence and business growth",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+      name: "Founder & CEO",
+      role: "Creative Director",
+      description: "Visionary leader with 3+ years in digital innovation"
     },
     {
-      name: "Sandip Bhusal",
-      role: "Chief Marketing Officer",
-      description: "Strategic marketing expert with deep industry knowledge",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+      name: "Development Team",
+      role: "Technical Experts",
+      description: "Skilled developers creating cutting-edge solutions"
     },
     {
-      name: "Riya",
-      role: "Chief Operating Officer",
-      description: "Operations specialist ensuring seamless project delivery",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b332c1ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+      name: "Design Team",
+      role: "Creative Minds",
+      description: "Artists crafting beautiful and functional designs"
+    },
+    {
+      name: "Marketing Team",
+      role: "Growth Strategists",
+      description: "Experts driving business growth through digital channels"
+    }
+  ];
+
+  const values = [
+    {
+      icon: Heart,
+      title: "Passion",
+      description: "We love what we do and it shows in our work"
+    },
+    {
+      icon: Target,
+      title: "Excellence",
+      description: "We strive for perfection in every project"
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "We embrace new technologies and creative solutions"
+    },
+    {
+      icon: Users,
+      title: "Collaboration",
+      description: "We work together to achieve extraordinary results"
     }
   ];
 
@@ -29,7 +54,7 @@ const About = () => {
       name: "Cloth & Food Bank Nepal",
       description: "Social initiative providing essential items to communities in need",
       category: "Non-Profit",
-      icon: Heart
+      icon: Handshake
     },
     {
       name: "Siddhartha E-Business School",
@@ -41,216 +66,161 @@ const About = () => {
       name: "Nepathya College",
       description: "Academic institution committed to quality higher education",
       category: "Education", 
-      icon: BookOpen
+      icon: Building
+    },
+    {
+      name: "Sky International College",
+      description: "Premier educational institution providing world-class education",
+      category: "Education",
+      icon: GraduationCap
     },
     {
       name: "Organic Divine Group",
       description: "Leading organic products company promoting sustainable living",
       category: "Business",
-      icon: Leaf
+      icon: Trophy
     }
   ];
 
-  const clients = [
-    "Organic Divine Group",
-    "Samragyee Nirman Sewa", 
-    "4D Architect",
-    "Mansoon Ply",
-    "Build Sansar Nepal"
-  ];
-
-  const services = [
+  const portfolioItems = [
     {
-      title: "Website Development",
-      description: "Modern, responsive websites",
-      icon: Monitor
+      title: "E-commerce Platform",
+      category: "Web Development",
+      description: "Modern online store with advanced features",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800"
     },
     {
-      title: "Video Production", 
-      description: "Reels and storytelling ads",
-      icon: Video
+      title: "Brand Identity Design",
+      category: "Graphic Design",
+      description: "Complete branding solution for local business",
+      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800"
     },
     {
-      title: "Graphic Design",
-      description: "Branding and visual identity",
-      icon: Palette
+      title: "Digital Marketing Campaign",
+      category: "Marketing",
+      description: "Successful social media campaign driving 300% growth",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800"
     },
     {
-      title: "Digital Marketing",
-      description: "Social media and online campaigns",
-      icon: Smartphone
+      title: "Corporate Video",
+      category: "Video Production",
+      description: "Professional company introduction video",
+      image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800"
     }
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-accent to-secondary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">About Adspire Labs</h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              We're a creative agency in Butwal dedicated to building brands that inspire through innovative design, strategic marketing, and professional education.
+              Empowering businesses and individuals through innovative digital solutions and comprehensive education
             </p>
           </div>
         </div>
       </section>
 
-      {/* Company Story */}
+      {/* Mission & Vision */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  Adspire Labs was founded with a vision to bridge the gap between creative excellence and business success. Located in the heart of Butwal-11, Kalikanagar, we've built our reputation on delivering results that matter.
-                </p>
-                <p>
-                  Our journey began with a simple belief: creativity should convert, and execution should inspire. This philosophy drives everything we do, from the websites we develop to the courses we teach.
-                </p>
-                <p>
-                  We're proud that our team secured a position in the Business Plan Competition through the Adspire Skill Share program, demonstrating our commitment to both education and practical business success.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gradient-to-br from-primary to-accent rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="mb-6">
-                To empower businesses and individuals in Nepal through creative solutions and professional education that drives real-world success.
-              </p>
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p>
-                To be Nepal's leading creative agency and education hub, known for innovation, excellence, and transformative results.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Card className="glass border-border/50">
+              <CardHeader>
+                <CardTitle className="text-primary text-2xl">Our Mission</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-lg text-muted-foreground">
+                  To bridge the gap between traditional business practices and modern digital solutions, 
+                  while nurturing the next generation of digital professionals through quality education and training.
+                </CardDescription>
+              </CardContent>
+            </Card>
+            
+            <Card className="glass border-border/50">
+              <CardHeader>
+                <CardTitle className="text-primary text-2xl">Our Vision</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-lg text-muted-foreground">
+                  To become the leading creative agency and educational hub in Nepal, known for innovation, 
+                  quality, and transforming lives through technology and creativity.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Our Values */}
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Meet Our Team</h2>
-            <p className="text-lg text-gray-600">The creative minds behind Adspire Labs</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardTitle className="text-primary">{member.name}</CardTitle>
-                  <CardDescription className="text-accent font-semibold">{member.role}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{member.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Values</h2>
-            <p className="text-lg text-gray-600">The principles that guide everything we do</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Values</h2>
+            <p className="text-lg text-muted-foreground">The principles that guide everything we do</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="text-white h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Excellence</h3>
-              <p className="text-gray-600">We strive for excellence in every project, delivering quality that exceeds expectations.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="text-white h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Innovation</h3>
-              <p className="text-gray-600">We embrace new technologies and creative approaches to solve complex challenges.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                <HandHeart className="text-white h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Partnership</h3>
-              <p className="text-gray-600">We build lasting relationships with our clients, partners, and students.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-light-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="text-white h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Education</h3>
-              <p className="text-gray-600">We believe in empowering others through knowledge and practical skills.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Work</h2>
-            <p className="text-lg text-gray-600">Creative solutions across multiple disciplines</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {services.map((service, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+            {values.map((value, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 glass border-border/50">
                 <CardHeader>
-                  <service.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <CardTitle className="text-primary">{service.title}</CardTitle>
+                  <value.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <CardTitle className="text-foreground">{value.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>{service.description}</CardDescription>
+                  <CardDescription>{value.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
           </div>
-          
-          {/* Client List */}
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-primary mb-6">Our Clients</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {clients.map((client, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                  <p className="font-semibold text-primary">{client}</p>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Team</h2>
+            <p className="text-lg text-muted-foreground">Meet the passionate people behind Adspire Labs</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {team.map((member, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 glass border-border/50">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-foreground">{member.name}</CardTitle>
+                  <p className="text-primary font-medium">{member.role}</p>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{member.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Partners Section */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Partners</h2>
-            <p className="text-lg text-gray-600">Organizations we're proud to work alongside</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Partners</h2>
+            <p className="text-lg text-muted-foreground">Organizations we're proud to work alongside</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partners.map((partner, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow duration-300">
+              <Card key={index} className="hover:shadow-xl transition-shadow duration-300 glass border-border/50">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
-                      <partner.icon className="h-8 w-8 text-white" />
+                      <partner.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <CardTitle className="text-primary">{partner.name}</CardTitle>
-                      <span className="bg-light-accent text-white px-3 py-1 rounded-full text-sm">
+                      <CardTitle className="text-foreground">{partner.name}</CardTitle>
+                      <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
                         {partner.category}
                       </span>
                     </div>
@@ -265,43 +235,32 @@ const About = () => {
         </div>
       </section>
 
-      {/* Achievement Highlight */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-white/20 rounded-full px-6 py-3 mb-6">
-              <Trophy className="h-6 w-6 mr-3" />
-              <span className="font-semibold">Achievement Highlight</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Business Plan Competition Success</h2>
-            <p className="text-xl max-w-3xl mx-auto">
-              Our team secured a position in the Business Plan Competition through our Adspire Skill Share program, 
-              showcasing our commitment to practical education and real-world business success.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Location */}
-      <section className="py-20 bg-gray-50">
+      {/* Portfolio Section */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Visit Our Office</h2>
-            <p className="text-lg text-gray-600">Located in the heart of Butwal</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Featured Work</h2>
+            <p className="text-lg text-muted-foreground">Some of our recent projects</p>
           </div>
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto text-center">
-            <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-primary mb-4">Adspire Labs</h3>
-            <p className="text-lg text-gray-600 mb-4">Butwal-11, Kalikanagar</p>
-            <p className="text-lg text-gray-600 mb-6">📞 9845323733</p>
-            <div className="space-y-2">
-              <p className="text-gray-600">
-                <strong>General Inquiries:</strong> info@adspirelabs.com.np
-              </p>
-              <p className="text-gray-600">
-                <strong>Training Programs:</strong> training@adspirelabs.com.np
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {portfolioItems.map((item, index) => (
+              <Card key={index} className="group overflow-hidden hover:shadow-lg transition-all duration-300 glass border-border/50">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader>
+                  <div className="text-primary text-sm font-medium">{item.category}</div>
+                  <CardTitle className="text-foreground">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{item.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

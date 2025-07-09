@@ -1,0 +1,40 @@
+
+{
+  "certificates": [
+    {
+      "certificateNumber": "ADSP-2024-001",
+      "studentName": "Rajesh Kumar Sharma",
+      "courseCompleted": "Full Stack Web Development",
+      "completionDate": "March 15, 2024",
+      "courseDuration": "3 months"
+    },
+    {
+      "certificateNumber": "ADSP-2024-002",
+      "studentName": "Priya Gautam",
+      "courseCompleted": "Digital Marketing Mastery",
+      "completionDate": "February 28, 2024",
+      "courseDuration": "2 months"
+    },
+    {
+      "certificateNumber": "ADSP-2024-003",
+      "studentName": "Amit Thapa",
+      "courseCompleted": "UI/UX Design Fundamentals",
+      "completionDate": "April 10, 2024",
+      "courseDuration": "2.5 months"
+    },
+    {
+      "certificateNumber": "ADSP-2023-045",
+      "studentName": "Sita Rai",
+      "courseCompleted": "Video Production & Editing",
+      "completionDate": "December 20, 2023",
+      "courseDuration": "6 weeks"
+    },
+    {
+      "certificateNumber": "ADSP-2023-046",
+      "studentName": "Krishna Bahadur Magar",
+      "courseCompleted": "Graphic Design Professional",
+      "completionDate": "November 30, 2023",
+      "courseDuration": "3 months"
+    }
+  ]
+}
