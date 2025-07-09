@@ -112,11 +112,11 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-accent to-secondary text-white py-20">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">About Adspire Labs</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">About Adspire Labs</h1>
+            <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-3xl mx-auto">
               Empowering businesses and individuals through innovative digital solutions and comprehensive education
             </p>
           </div>
@@ -127,7 +127,7 @@ const About = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <Card className="glass border-border/50">
+            <Card className="bg-card border-border">
               <CardHeader>
                 <CardTitle className="text-primary text-2xl">Our Mission</CardTitle>
               </CardHeader>
@@ -139,7 +139,7 @@ const About = () => {
               </CardContent>
             </Card>
             
-            <Card className="glass border-border/50">
+            <Card className="bg-card border-border">
               <CardHeader>
                 <CardTitle className="text-primary text-2xl">Our Vision</CardTitle>
               </CardHeader>
@@ -163,7 +163,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 glass border-border/50">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 bg-card border-border">
                 <CardHeader>
                   <value.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                   <CardTitle className="text-foreground">{value.title}</CardTitle>
@@ -186,7 +186,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 glass border-border/50">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 bg-card border-border">
                 <CardHeader>
                   <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
                     <Users className="w-8 h-8 text-white" />
@@ -212,7 +212,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partners.map((partner, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow duration-300 glass border-border/50">
+              <Card key={index} className="hover:shadow-xl transition-shadow duration-300 bg-card border-border">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
@@ -244,7 +244,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="group overflow-hidden hover:shadow-lg transition-all duration-300 glass border-border/50">
+              <Card key={index} className="group overflow-hidden hover:shadow-lg transition-all duration-300 bg-card border-border">
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={item.image} 

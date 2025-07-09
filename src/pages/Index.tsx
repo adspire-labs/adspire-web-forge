@@ -53,7 +53,7 @@ const Index = () => {
                   Explore Services <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 btn-secondary">
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-border text-foreground hover:bg-muted">
                 <Link to="/courses">
                   Join a Course
                 </Link>
@@ -62,7 +62,7 @@ const Index = () => {
             
             {/* Certificate Verification Button */}
             <div className="mt-8">
-              <Button asChild variant="ghost" className="text-sm text-muted-foreground hover:text-primary">
+              <Button asChild variant="ghost" className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50">
                 <Link to="/verify-certificate" className="flex items-center">
                   <Shield className="mr-2 h-4 w-4" />
                   Verify Certificate
@@ -108,7 +108,7 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button asChild variant="outline" size="lg" className="px-8 btn-secondary">
+            <Button asChild variant="outline" size="lg" className="px-8 border-border text-foreground hover:bg-muted">
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
@@ -156,7 +156,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-r from-primary via-accent to-secondary text-white">
+      <section className="py-32 bg-gradient-to-r from-primary via-accent to-secondary text-primary-foreground">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Get Started?</h2>
           <p className="text-xl mb-12 opacity-90 leading-relaxed">
@@ -166,7 +166,7 @@ const Index = () => {
             <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90">
               <Link to="/contact">Contact Us</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 text-white border-white hover:bg-white hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10">
               <Link to="/about">Learn More</Link>
             </Button>
           </div>

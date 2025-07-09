@@ -43,11 +43,11 @@ const VerifyCertificate = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background dark:bg-gray-900 pt-20">
+    <div className="min-h-screen bg-background pt-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-full mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
             <Award className="w-8 h-8 text-primary" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -59,7 +59,7 @@ const VerifyCertificate = () => {
         </div>
 
         {/* Search Card */}
-        <Card className="backdrop-blur-sm bg-white/80 dark:bg-gray-800/80 border border-gray-200/50 dark:border-gray-700/50 shadow-xl">
+        <Card className="bg-card border-border shadow-lg">
           <CardHeader>
             <CardTitle className="text-center text-primary">Enter Certificate Number</CardTitle>
           </CardHeader>
@@ -70,12 +70,12 @@ const VerifyCertificate = () => {
                 value={certificateNumber}
                 onChange={(e) => setCertificateNumber(e.target.value)}
                 onKeyPress={handleKeyPress}
-                className="flex-1 backdrop-blur-sm bg-white/50 dark:bg-gray-900/50"
+                className="flex-1 bg-background border-border"
               />
               <Button 
                 onClick={handleSearch} 
                 disabled={isLoading || !certificateNumber.trim()}
-                className="px-8 bg-primary hover:bg-primary/90"
+                className="px-8 btn-primary"
               >
                 {isLoading ? (
                   <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent" />
@@ -92,43 +92,43 @@ const VerifyCertificate = () => {
             {isSearched && (
               <div className="mt-8 animate-fade-in">
                 {searchResult ? (
-                  <Card className="bg-green-50/80 dark:bg-green-900/20 border-green-200 dark:border-green-800 backdrop-blur-sm">
+                  <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
                     <CardContent className="p-6">
                       <div className="flex items-center mb-4">
-                        <CheckCircle className="w-6 h-6 text-green-600 mr-3" />
+                        <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400 mr-3" />
                         <h3 className="text-lg font-semibold text-green-800 dark:text-green-300">
                           Certificate Verified
                         </h3>
                       </div>
                       <div className="grid gap-3 text-sm">
                         <div className="flex justify-between">
-                          <span className="font-medium text-gray-600 dark:text-gray-400">Student Name:</span>
-                          <span className="text-gray-900 dark:text-gray-100">{searchResult.studentName}</span>
+                          <span className="font-medium text-muted-foreground">Student Name:</span>
+                          <span className="text-foreground">{searchResult.studentName}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium text-gray-600 dark:text-gray-400">Course:</span>
-                          <span className="text-gray-900 dark:text-gray-100">{searchResult.courseCompleted}</span>
+                          <span className="font-medium text-muted-foreground">Course:</span>
+                          <span className="text-foreground">{searchResult.courseCompleted}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium text-gray-600 dark:text-gray-400">Completion Date:</span>
-                          <span className="text-gray-900 dark:text-gray-100">{searchResult.completionDate}</span>
+                          <span className="font-medium text-muted-foreground">Completion Date:</span>
+                          <span className="text-foreground">{searchResult.completionDate}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium text-gray-600 dark:text-gray-400">Duration:</span>
-                          <span className="text-gray-900 dark:text-gray-100">{searchResult.courseDuration}</span>
+                          <span className="font-medium text-muted-foreground">Duration:</span>
+                          <span className="text-foreground">{searchResult.courseDuration}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-medium text-gray-600 dark:text-gray-400">Certificate ID:</span>
-                          <span className="text-gray-900 dark:text-gray-100 font-mono">{searchResult.certificateNumber}</span>
+                          <span className="font-medium text-muted-foreground">Certificate ID:</span>
+                          <span className="text-foreground font-mono">{searchResult.certificateNumber}</span>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 ) : (
-                  <Card className="bg-red-50/80 dark:bg-red-900/20 border-red-200 dark:border-red-800 backdrop-blur-sm">
+                  <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
                     <CardContent className="p-6">
                       <div className="flex items-center mb-2">
-                        <XCircle className="w-6 h-6 text-red-600 mr-3" />
+                        <XCircle className="w-6 h-6 text-red-600 dark:text-red-400 mr-3" />
                         <h3 className="text-lg font-semibold text-red-800 dark:text-red-300">
                           Certificate Not Found
                         </h3>
@@ -147,7 +147,7 @@ const VerifyCertificate = () => {
 
         {/* Info Section */}
         <div className="mt-12 text-center">
-          <Card className="backdrop-blur-sm bg-white/50 dark:bg-gray-800/50 border border-gray-200/30 dark:border-gray-700/30">
+          <Card className="bg-card border-border">
             <CardContent className="p-6">
               <h3 className="text-lg font-semibold text-foreground mb-3">How to Find Your Certificate Number</h3>
               <p className="text-muted-foreground">

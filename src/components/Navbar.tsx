@@ -49,9 +49,6 @@ export const Navbar = () => {
               </Link>
             ))}
             <ThemeToggle />
-            <Button asChild className="ml-4 btn-hover btn-primary">
-              <Link to="/contact">Get Started</Link>
-            </Button>
           </div>
 
           {/* Mobile Navigation */}
@@ -83,9 +80,6 @@ export const Navbar = () => {
                       {item.name}
                     </Link>
                   ))}
-                  <Button asChild className="mt-6 w-full btn-hover btn-primary">
-                    <Link to="/contact" onClick={() => setIsOpen(false)}>Get Started</Link>
-                  </Button>
                 </div>
               </SheetContent>
             </Sheet>

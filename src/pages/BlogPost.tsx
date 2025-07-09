@@ -63,11 +63,11 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">Post Not Found</h1>
-          <p className="text-gray-600 mb-6">The blog post you're looking for doesn't exist.</p>
-          <Button asChild>
+          <p className="text-muted-foreground mb-6">The blog post you're looking for doesn't exist.</p>
+          <Button asChild className="btn-primary">
             <Link to="/blog">Back to Blog</Link>
           </Button>
         </div>
@@ -76,21 +76,21 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <section className="bg-gradient-to-br from-primary via-accent to-secondary text-white py-20">
+      <section className="bg-gradient-to-br from-primary via-accent to-secondary text-primary-foreground py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
-            <Link to="/blog" className="text-white/80 hover:text-white transition-colors">
+            <Link to="/blog" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
               ← Back to Blog
             </Link>
           </div>
           <div className="flex items-center space-x-4 mb-6">
             <span className="bg-white/20 px-3 py-1 rounded-full text-sm">{post.category}</span>
-            <span className="text-white/80">{post.readTime}</span>
-            <span className="text-white/80">{post.date}</span>
+            <span className="text-primary-foreground/80">{post.readTime}</span>
+            <span className="text-primary-foreground/80">{post.date}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">{post.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground">{post.title}</h1>
         </div>
       </section>
 
@@ -98,25 +98,21 @@ const BlogPost = () => {
       <article className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div 
-            className="prose prose-lg max-w-none"
+            className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground"
             dangerouslySetInnerHTML={{ __html: post.content }}
-            style={{
-              color: '#374151',
-              lineHeight: '1.75'
-            }}
           />
         </div>
       </article>
 
       {/* Related Posts */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Related Posts</h2>
-            <p className="text-gray-600">More insights and tips from our blog</p>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Related Posts</h2>
+            <p className="text-muted-foreground">More insights and tips from our blog</p>
           </div>
           <div className="text-center">
-            <Button asChild>
+            <Button asChild className="btn-primary">
               <Link to="/blog">View All Posts</Link>
             </Button>
           </div>
