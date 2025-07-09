@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,6 +18,7 @@ const VerifyCertificate = () => {
   const [searchResult, setSearchResult] = useState<Certificate | null>(null);
   const [isSearched, setIsSearched] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [displayResult, setDisplayResult] = useState<Certificate | null>(null);
 
   const handleSearch = async () => {
     if (!certificateNumber.trim()) return;
@@ -41,6 +41,21 @@ const VerifyCertificate = () => {
       handleSearch();
     }
   };
+
+  // Reset search state when input changes
+  useEffect(() => {
+    if (certificateNumber) {
+      setIsSearched(false);
+      setSearchResult(null);
+    }
+  }, [certificateNumber]);
+
+  // Sync display result with search result
+  useEffect(() => {
+    if (isSearched) {
+      setDisplayResult(searchResult);
+    }
+  }, [isSearched, searchResult]);
 
   return (
     <div className="min-h-screen bg-background pt-20">
@@ -90,8 +105,8 @@ const VerifyCertificate = () => {
 
             {/* Results */}
             {isSearched && (
-              <div className="mt-8 animate-fade-in">
-                {searchResult ? (
+              <div className="mt-8">
+                {displayResult ? (
                   <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
                     <CardContent className="p-6">
                       <div className="flex items-center mb-4">
@@ -103,23 +118,23 @@ const VerifyCertificate = () => {
                       <div className="grid gap-3 text-sm">
                         <div className="flex justify-between">
                           <span className="font-medium text-muted-foreground">Student Name:</span>
-                          <span className="text-foreground">{searchResult.studentName}</span>
+                          <span className="text-foreground">{displayResult.studentName}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="font-medium text-muted-foreground">Course:</span>
-                          <span className="text-foreground">{searchResult.courseCompleted}</span>
+                          <span className="text-foreground">{displayResult.courseCompleted}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="font-medium text-muted-foreground">Completion Date:</span>
-                          <span className="text-foreground">{searchResult.completionDate}</span>
+                          <span className="text-foreground">{displayResult.completionDate}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="font-medium text-muted-foreground">Duration:</span>
-                          <span className="text-foreground">{searchResult.courseDuration}</span>
+                          <span className="text-foreground">{displayResult.courseDuration}</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="font-medium text-muted-foreground">Certificate ID:</span>
-                          <span className="text-foreground font-mono">{searchResult.certificateNumber}</span>
+                          <span className="text-foreground font-mono">{displayResult.certificateNumber}</span>
                         </div>
                       </div>
                     </CardContent>
