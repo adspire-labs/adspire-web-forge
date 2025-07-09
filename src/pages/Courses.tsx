@@ -9,7 +9,7 @@ const Courses = () => {
     {
       title: "Digital Marketing Mastery",
       duration: "2 months",
-      price: "NPR 15,000",
+      price: "NPR 20,000",
       description: "Master the art of digital marketing with hands-on training in modern tools and strategies",
       tools: ["Canva", "CapCut", "AI Tools", "Meta Ads Manager", "Google Analytics"],
       highlights: [
@@ -24,9 +24,9 @@ const Courses = () => {
     {
       title: "Video Editing Professional",
       duration: "2.5 months", 
-      price: "NPR 18,000",
+      price: "NPR 25,000",
       description: "Become a professional video editor with comprehensive training in industry-standard software",
-      tools: ["DaVinci Resolve", "Adobe Premiere Pro", "After Effects", "Color Grading", "Audio Editing"],
+      tools: ["DaVinci Resolve", "Advance Editing", "Basic Animation", "Basic Color Grading", "Basic Audio Editing"],
       highlights: [
         "Professional Video Editing",
         "Color Correction & Grading",
@@ -39,9 +39,9 @@ const Courses = () => {
     {
       title: "Filmmaking & Video Production",
       duration: "5 months",
-      price: "NPR 35,000",
+      price: "NPR 50,000",
       description: "Complete filmmaking course from pre-production to post-production",
-      tools: ["Camera Operation", "Lighting", "Audio Recording", "Directing", "Post-Production"],
+      tools: ["Camera Operation", "Lighting", "Audio Recording", "Shooting", "Drones", "Editing Software", "Sound Design"],
       highlights: [
         "Script Writing",
         "Camera Techniques",
@@ -53,10 +53,10 @@ const Courses = () => {
     },
     {
       title: "Graphic Design Fundamentals",
-      duration: "3 months",
+      duration: "2 months",
       price: "NPR 20,000", 
       description: "Master graphic design principles and create stunning visual communications",
-      tools: ["Adobe Photoshop", "Illustrator", "InDesign", "Canva Pro", "Figma"],
+      tools: ["Adobe Photoshop", "Illustrator", "Canva Pro"],
       highlights: [
         "Logo Design",
         "Brand Identity",

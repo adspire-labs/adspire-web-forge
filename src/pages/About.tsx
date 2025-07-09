@@ -57,7 +57,7 @@ const About = () => {
       icon: Handshake
     },
     {
-      name: "Siddhartha E-Business School",
+      name: "Siddhartha English Boarding School",
       description: "Educational institution focusing on digital business and entrepreneurship",
       category: "Education",
       icon: GraduationCap
@@ -76,6 +76,12 @@ const About = () => {
     },
     {
       name: "Organic Divine Group",
+      description: "Leading organic products company promoting sustainable living",
+      category: "Business",
+      icon: Trophy
+    },
+    {
+      name: "Samragyee Nirman Sewa",
       description: "Leading organic products company promoting sustainable living",
       category: "Business",
       icon: Trophy

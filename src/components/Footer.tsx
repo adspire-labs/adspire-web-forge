@@ -79,10 +79,7 @@ export const Footer = () => {
                  className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.tiktok.com/@adspirelabs" target="_blank" rel="noopener noreferrer" 
-                 className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
+            
             </div>
           </div>
         </div>
