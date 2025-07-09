@@ -43,7 +43,28 @@ const Blog = () => {
       category: "Technology",
       readTime: "8 min read",
       image: "🤖"
+    },
+    {
+      id: 4,
+      slug: "how-ai-changing-content-creation",
+      title: "How AI is Changing Content Creation",
+      description: "Exploring the impact of artificial intelligence on modern content creation workflows.",
+      date: "2024-01-01",
+      category: "Technology",
+      readTime: "8 min read",
+      image: "🤖"
+    },
+    {
+      id: 4,
+      slug: "how-ai-changing-content-creation",
+      title: "How AI is Changing Content Creation",
+      description: "Exploring the impact of artificial intelligence on modern content creation workflows.",
+      date: "2024-01-01",
+      category: "Technology",
+      readTime: "8 min read",
+      image: "🤖"
     }
+    
   ];
 
   const categories = ["All", "Video Editing", "Digital Marketing", "Graphic Design", "Technology"];
