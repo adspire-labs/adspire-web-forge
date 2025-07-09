@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -87,52 +86,21 @@ const Courses = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-accent to-secondary text-white py-20">
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Professional Training Courses</h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-              Learn in-demand digital skills from industry experts and launch your creative career
+          <div className="section-header">
+            <h1 className="section-title">Our Courses</h1>
+            <p className="section-subtitle">
+              Professional training programs to boost your digital skills
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <div className="flex items-center">
-                <Users className="mr-2 h-5 w-5" />
-                200+ Students Trained
-              </div>
-              <div className="flex items-center">
-                <Award className="mr-2 h-5 w-5" />
-                Industry Recognized
-              </div>
-              <div className="flex items-center">
-                <BookOpen className="mr-2 h-5 w-5" />
-                Practical Learning
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Courses Grid */}
-      <section className="py-20">
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Choose Your Path</h2>
@@ -192,8 +160,25 @@ const Courses = () => {
         </div>
       </section>
 
+      {/* Features Section */}
+      <section className="section-padding bg-muted/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="section-padding">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Ready to Start Your Learning Journey?

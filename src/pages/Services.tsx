@@ -1,115 +1,162 @@
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Monitor, Smartphone, Palette, Video, Share2, ShoppingCart, Camera } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Rocket, Code, Brush, Film, Users, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
   const services = [
     {
+      id: 1,
       title: "Website Development",
-      description: "Modern, responsive websites built with cutting-edge technologies",
-      features: ["Custom Design", "Mobile Responsive", "SEO Optimized", "Fast Loading", "Content Management"],
-      icon: Monitor
+      description: "Crafting responsive and user-friendly websites tailored to your business needs.",
+      icon: Code,
+      features: [
+        "Custom website design",
+        "E-commerce solutions",
+        "SEO optimization",
+        "Mobile responsiveness",
+      ],
     },
     {
+      id: 2,
       title: "Digital Marketing",
-      description: "Strategic digital campaigns that drive real business growth",
-      features: ["Social Media Marketing", "Google Ads", "Content Strategy", "Analytics & Reporting", "Brand Development"],
-      icon: Smartphone
+      description: "Strategic marketing solutions to enhance your online presence and drive conversions.",
+      icon: Rocket,
+      features: [
+        "Social media marketing",
+        "Search engine optimization",
+        "Content marketing",
+        "Email marketing",
+      ],
     },
     {
-      title: "Graphic Design & Branding",
-      description: "Visual identity that makes your brand memorable and impactful",
-      features: ["Logo Design", "Brand Guidelines", "Print Design", "Digital Assets", "Brand Strategy"],
-      icon: Palette
+      id: 3,
+      title: "Graphic Design",
+      description: "Creative design services to visually communicate your brand's message and identity.",
+      icon: Brush,
+      features: [
+        "Logo design",
+        "Branding guidelines",
+        "Marketing collateral",
+        "UI/UX design",
+      ],
     },
     {
+      id: 4,
       title: "Video Production",
-      description: "Compelling visual stories that engage and convert your audience",
-      features: ["Commercial Videos", "Social Media Reels", "Storytelling Ads", "Product Videos", "Event Coverage"],
-      icon: Video
+      description: "High-quality video production services to engage your audience and tell your story.",
+      icon: Film,
+      features: [
+        "Promotional videos",
+        "Corporate videos",
+        "Event coverage",
+        "Animation",
+      ],
+    },
+  ];
+
+  const processSteps = [
+    {
+      id: 1,
+      title: "Discovery",
+      description: "We start by understanding your business goals and target audience.",
     },
     {
-      title: "Social Media Management",
-      description: "Complete social media strategy and execution for your brand",
-      features: ["Content Creation", "Community Management", "Paid Advertising", "Analytics", "Strategy Development"],
-      icon: Share2
+      id: 2,
+      title: "Planning",
+      description: "Developing a strategic plan tailored to your specific needs and objectives.",
     },
     {
-      title: "Daraz Store Management",
-      description: "Complete e-commerce solutions for Nepal's largest marketplace",
-      features: ["Store Setup", "Product Optimization", "Inventory Management", "Marketing Campaigns", "Performance Analytics"],
-      icon: ShoppingCart
+      id: 3,
+      title: "Execution",
+      description: "Implementing the plan with precision and creativity to achieve optimal results.",
     },
     {
-      title: "Product Photography",
-      description: "Professional photography that showcases your products perfectly",
-      features: ["Studio Photography", "Lifestyle Shots", "360° Product Views", "Image Editing", "Brand Consistency"],
-      icon: Camera
-    }
+      id: 4,
+      title: "Optimization",
+      description: "Continuously monitoring and optimizing performance to maximize your ROI.",
+    },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16 md:py-20">
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6">Our Services</h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed">
-              Comprehensive digital solutions designed to grow your business and strengthen your brand presence
+          <div className="section-header">
+            <h1 className="section-title">Our Services</h1>
+            <p className="section-subtitle">
+              Comprehensive digital solutions to grow your business and brand
             </p>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 md:py-20">
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border border-gray-100 bg-white h-full">
-                <CardHeader className="text-center pb-4">
-                  <service.icon className="h-12 w-12 md:h-16 md:w-16 text-primary mx-auto mb-4" />
-                  <CardTitle className="text-xl md:text-2xl text-gray-900 mb-3">{service.title}</CardTitle>
-                  <CardDescription className="text-gray-600 text-sm md:text-base leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-700 text-sm md:text-base">
-                        <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {services.map((service) => {
+              const IconComponent = service.icon;
+              return (
+                <Card key={service.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card">
+                  <div className="aspect-video bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <IconComponent className="w-16 h-16 text-primary-foreground" />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-foreground">{service.title}</CardTitle>
+                    <CardDescription>{service.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="list-none space-y-2">
+                      {service.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 mr-2 text-primary" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="section-padding bg-muted/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="section-header">
+            <h2 className="section-title">Our Process</h2>
+            <p className="section-subtitle">
+              A streamlined process to deliver exceptional results
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step) => (
+              <div key={step.id} className="text-center">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-primary-foreground text-2xl font-bold">{step.id}</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
+                <p className="text-muted-foreground">{step.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed">
-            Let's discuss how our services can help you achieve your business goals
+      <section className="section-padding">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title">Ready to Get Started?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Contact us today to discuss your project and explore how we can help you achieve your goals.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="w-full sm:w-auto">
-              <Link to="/contact">Get Started Today</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link to="/portfolio">View Our Work</Link>
-            </Button>
-          </div>
+          <Button asChild className="btn-primary btn-hover">
+            <Link to="/contact">Contact Us</Link>
+          </Button>
         </div>
       </section>
     </div>

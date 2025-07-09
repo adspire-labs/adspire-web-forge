@@ -28,9 +28,9 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-white font-bold text-lg md:text-xl">A</span>
+              <span className="text-primary-foreground font-bold text-lg md:text-xl">A</span>
             </div>
-            <span className="text-primary font-bold text-lg md:text-xl">Adspire Labs</span>
+            <span className="brand-text text-lg md:text-xl">Adspire Labs</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -42,7 +42,7 @@ export const Navbar = () => {
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md hover-underline ${
                   isActive(item.href)
                     ? "text-primary bg-primary/5"
-                    : "text-muted-foreground hover:text-primary hover:bg-muted/50"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 }`}
               >
                 {item.name}
@@ -77,7 +77,7 @@ export const Navbar = () => {
                       className={`px-4 py-3 text-lg font-medium transition-colors duration-200 rounded-lg ${
                         isActive(item.href)
                           ? "text-primary bg-primary/5"
-                          : "text-muted-foreground hover:text-primary hover:bg-muted/50"
+                          : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                       }`}
                     >
                       {item.name}

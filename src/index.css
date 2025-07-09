@@ -53,22 +53,22 @@ All colors MUST be HSL.
     --background: 224 71% 4%;
     --foreground: 213 31% 91%;
 
-    --card: 224 71% 4%;
+    --card: 224 71% 6%;
     --card-foreground: 213 31% 91%;
 
     --popover: 224 71% 4%;
     --popover-foreground: 213 31% 91%;
 
-    --primary: 213 47% 25%;
+    --primary: 213 47% 35%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 215 28% 17%;
+    --secondary: 215 28% 20%;
     --secondary-foreground: 213 31% 91%;
 
     --muted: 215 28% 17%;
     --muted-foreground: 217 11% 65%;
 
-    --accent: 215 28% 17%;
+    --accent: 213 35% 40%;
     --accent-foreground: 213 31% 91%;
 
     --destructive: 0 63% 31%;
@@ -76,7 +76,7 @@ All colors MUST be HSL.
 
     --border: 215 28% 17%;
     --input: 215 28% 17%;
-    --ring: 213 47% 25%;
+    --ring: 213 47% 35%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -120,16 +120,28 @@ All colors MUST be HSL.
     animation: fadeIn 0.6s ease-out forwards;
   }
 
-  /* Frosted glass effect */
+  /* Frosted glass effect with better brand text visibility */
   .glass {
     backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.125);
   }
 
   .dark .glass {
-    background-color: rgba(17, 25, 40, 0.75);
+    background-color: rgba(17, 25, 40, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  /* Brand text visibility in glass navbar */
+  .glass .brand-text {
+    color: hsl(var(--primary));
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .glass .brand-text {
+    color: hsl(var(--primary-foreground));
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   }
 
   /* Hover effects for links */
@@ -161,17 +173,30 @@ All colors MUST be HSL.
     transform: translateY(-1px);
   }
 
-  /* Enhanced button styles */
+  /* Enhanced button styles with better contrast */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-200;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-200 border border-primary/20;
   }
 
   .btn-secondary {
-    @apply bg-white/10 text-foreground hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-200;
+    @apply bg-card text-card-foreground hover:bg-muted border border-border transition-all duration-200;
   }
 
-  .dark .btn-secondary {
-    @apply bg-white/5 hover:bg-white/10 border-white/10;
+  /* Section styling for consistency */
+  .section-padding {
+    @apply py-16 lg:py-20;
+  }
+
+  .section-header {
+    @apply text-center mb-12;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-foreground mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-muted-foreground max-w-3xl mx-auto;
   }
 }
 

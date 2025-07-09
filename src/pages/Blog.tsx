@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Video, Smartphone, Palette, Bot } from "lucide-react";
 
 const Blog = () => {
   const blogPosts = [
@@ -12,7 +13,7 @@ const Blog = () => {
       date: "2024-01-15",
       category: "Video Editing",
       readTime: "5 min read",
-      image: "📹"
+      icon: Video
     },
     {
       id: 2,
@@ -22,7 +23,7 @@ const Blog = () => {
       date: "2024-01-10",
       category: "Digital Marketing", 
       readTime: "7 min read",
-      image: "📱"
+      icon: Smartphone
     },
     {
       id: 3,
@@ -32,7 +33,7 @@ const Blog = () => {
       date: "2024-01-05",
       category: "Graphic Design",
       readTime: "6 min read", 
-      image: "🎨"
+      icon: Palette
     },
     {
       id: 4,
@@ -42,41 +43,20 @@ const Blog = () => {
       date: "2024-01-01",
       category: "Technology",
       readTime: "8 min read",
-      image: "🤖"
-    },
-    {
-      id: 4,
-      slug: "how-ai-changing-content-creation",
-      title: "How AI is Changing Content Creation",
-      description: "Exploring the impact of artificial intelligence on modern content creation workflows.",
-      date: "2024-01-01",
-      category: "Technology",
-      readTime: "8 min read",
-      image: "🤖"
-    },
-    {
-      id: 4,
-      slug: "how-ai-changing-content-creation",
-      title: "How AI is Changing Content Creation",
-      description: "Exploring the impact of artificial intelligence on modern content creation workflows.",
-      date: "2024-01-01",
-      category: "Technology",
-      readTime: "8 min read",
-      image: "🤖"
+      icon: Bot
     }
-    
   ];
 
   const categories = ["All", "Video Editing", "Digital Marketing", "Graphic Design", "Technology"];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-accent to-secondary text-white py-20">
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Blog</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+          <div className="section-header">
+            <h1 className="section-title">Our Blog</h1>
+            <p className="section-subtitle">
               Insights, tips, and trends in digital marketing, design, and video production
             </p>
           </div>
@@ -84,7 +64,7 @@ const Blog = () => {
       </section>
 
       {/* Categories Filter */}
-      <section className="py-8 bg-gray-50">
+      <section className="py-8 bg-muted/50 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
@@ -92,8 +72,8 @@ const Blog = () => {
                 key={index}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
                   index === 0 
-                    ? "bg-primary text-white" 
-                    : "bg-white text-gray-600 hover:bg-primary hover:text-white"
+                    ? "bg-primary text-primary-foreground" 
+                    : "bg-card text-card-foreground hover:bg-primary hover:text-primary-foreground border border-border"
                 }`}
               >
                 {category}
@@ -104,39 +84,42 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20">
+      <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {blogPosts.map((post) => (
-              <Card key={post.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div className="aspect-video bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-6xl text-white">{post.image}</span>
-                </div>
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-light-accent text-white px-3 py-1 rounded-full text-sm">
-                      {post.category}
-                    </span>
-                    <span className="text-sm text-gray-500">{post.readTime}</span>
+            {blogPosts.map((post) => {
+              const IconComponent = post.icon;
+              return (
+                <Card key={post.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card">
+                  <div className="aspect-video bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                    <IconComponent className="w-16 h-16 text-primary-foreground" />
                   </div>
-                  <CardTitle className="text-primary hover:text-accent transition-colors">
-                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                  </CardTitle>
-                  <CardDescription>{post.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                    <Link 
-                      to={`/blog/${post.slug}`}
-                      className="text-primary hover:text-accent font-medium text-sm transition-colors"
-                    >
-                      Read More →
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
+                        {post.category}
+                      </span>
+                      <span className="text-sm text-muted-foreground">{post.readTime}</span>
+                    </div>
+                    <CardTitle className="text-foreground hover:text-primary transition-colors">
+                      <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                    </CardTitle>
+                    <CardDescription>{post.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground">{post.date}</span>
+                      <Link 
+                        to={`/blog/${post.slug}`}
+                        className="text-primary hover:text-accent font-medium text-sm transition-colors"
+                      >
+                        Read More →
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
