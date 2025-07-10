@@ -33,10 +33,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "30+", label: "Happy Clients" },
-    { number: "200+", label: "Students Trained" },
-    { number: "3", label: "Years Experience" }
+    { number: "100+", label: "Projects Completed" },
+    { number: "20+", label: "Happy Clients" },
+    { number: "30+", label: "Students Trained" },
+    { number: "1", label: "Years Experience" }
   ];
 
   return (

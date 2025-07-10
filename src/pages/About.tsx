@@ -1,28 +1,31 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Target, Lightbulb, Heart, GraduationCap, Building, Handshake, Trophy } from "lucide-react";
 
 const About = () => {
   const team = [
     {
-      name: "Founder & CEO",
-      role: "Creative Director",
-      description: "Visionary leader with 3+ years in digital innovation"
+      name: "Saroj Pokhrel",
+      role: "Founder",
+      description: "Visionary leader with 3+ years in digital innovation",
+      image: "/team/saroj.jpg" // Path to team member image
     },
     {
-      name: "Development Team",
-      role: "Technical Experts",
-      description: "Skilled developers creating cutting-edge solutions"
+      name: "Sandip Bhusal",
+      role: "CMO",
+      description: "Skilled developers creating cutting-edge solutions",
+      image: "/team/sandip.png" // Path to team member image
     },
     {
-      name: "Design Team",
-      role: "Creative Minds",
-      description: "Artists crafting beautiful and functional designs"
+      name: "Riya Chaudhary",
+      role: "COO",
+      description: "Artists crafting beautiful and functional designs",
+      image: "/team/riya.png" // Path to team member image
     },
     {
-      name: "Marketing Team",
-      role: "Growth Strategists",
-      description: "Experts driving business growth through digital channels"
+      name: "Camera Crew",
+      role: "Rabin & Team",
+      description: "Experts driving business growth through digital channels",
+      image: "/team/rabin.jpg" // Path to team member image
     }
   ];
 
@@ -54,37 +57,37 @@ const About = () => {
       name: "Cloth & Food Bank Nepal",
       description: "Social initiative providing essential items to communities in need",
       category: "Non-Profit",
-      icon: Handshake
+      image: "/partners/cfbn.png" // Path to partner image
     },
     {
       name: "Siddhartha English Boarding School",
       description: "Educational institution focusing on digital business and entrepreneurship",
       category: "Education",
-      icon: GraduationCap
+      image: "/partners/sebs.png" // Path to partner image
     },
     {
       name: "Nepathya College",
       description: "Academic institution committed to quality higher education",
       category: "Education", 
-      icon: Building
+      image: "/partners/nc.png" // Path to partner image
     },
     {
       name: "Sky International College",
       description: "Premier educational institution providing world-class education",
       category: "Education",
-      icon: GraduationCap
+      image: "/partners/sic.png" // Path to partner image
     },
     {
       name: "Organic Divine Group",
       description: "Leading organic products company promoting sustainable living",
       category: "Business",
-      icon: Trophy
+      image: "/partners/odg.png" // Path to partner image
     },
     {
       name: "Samragyee Nirman Sewa",
-      description: "Leading organic products company promoting sustainable living",
+      description: "Construction services with a focus on quality and sustainability",
       category: "Business",
-      icon: Trophy
+      image: "/partners/sns.png" // Path to partner image
     }
   ];
 
@@ -117,7 +120,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* Hero Section - Unchanged */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -129,7 +132,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Mission & Vision - Unchanged */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -160,7 +163,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Values */}
+      {/* Our Values - Unchanged */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -183,7 +186,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Team */}
+      {/* Updated Team Section with Circular Images */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -194,8 +197,13 @@ const About = () => {
             {team.map((member, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 bg-card border-border">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-8 h-8 text-white" />
+                  {/* Circular image container - automatically sizes and crops to circle */}
+                  <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md bg-white">
+                    <img 
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <CardTitle className="text-foreground">{member.name}</CardTitle>
                   <p className="text-primary font-medium">{member.role}</p>
@@ -209,7 +217,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
+      {/* Updated Partners Section with Circular Images */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -221,8 +229,13 @@ const About = () => {
               <Card key={index} className="hover:shadow-xl transition-shadow duration-300 bg-card border-border">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
-                      <partner.icon className="w-8 h-8 text-white" />
+                    {/* Circular partner logo - automatically sizes and crops to circle */}
+                    <div className="w-16 h-16 rounded-full overflow-hidden bg-white border border-gray-200 shadow-sm">
+                      <img 
+                        src={partner.image} 
+                        alt={partner.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
                       <CardTitle className="text-foreground">{partner.name}</CardTitle>
@@ -241,7 +254,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
+      {/* Portfolio Section - Unchanged */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
