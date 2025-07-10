@@ -25,13 +25,17 @@ export const Navbar = () => {
     <nav className="glass sticky top-0 z-50 border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-primary-foreground font-bold text-lg md:text-xl">A</span>
-            </div>
-            <span className="brand-text text-lg md:text-xl">Adspire Labs</span>
-          </Link>
+       {/* Logo */}
+<Link to="/" className="flex items-center space-x-2 group">
+  <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-transform group-hover:scale-105">
+    <img 
+      src="logo/logo.png" 
+      alt="Adspire Labs Logo"
+      className="h-full w-full object-contain" 
+    />
+  </div>
+  <span className="brand-text text-lg md:text-xl">Adspire Labs</span>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
