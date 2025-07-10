@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Rocket, Code, Brush, Film, Users, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import websiteDevImg from "@/assets/website-development.jpg";
+import digitalMarketingImg from "@/assets/digital-marketing.jpg";
+import graphicDesignImg from "@/assets/graphic-design.jpg";
+import videoProductionImg from "@/assets/video-production.jpg";
 
 const Services = () => {
   const services = [
@@ -9,7 +13,7 @@ const Services = () => {
       id: 1,
       title: "Website Development",
       description: "Crafting responsive and user-friendly websites tailored to your business needs.",
-      icon: Code,
+      image: websiteDevImg,
       features: [
         "Custom website design",
         "E-commerce solutions",
@@ -21,7 +25,7 @@ const Services = () => {
       id: 2,
       title: "Digital Marketing",
       description: "Strategic marketing solutions to enhance your online presence and drive conversions.",
-      icon: Rocket,
+      image: digitalMarketingImg,
       features: [
         "Social media marketing",
         "Search engine optimization",
@@ -33,7 +37,7 @@ const Services = () => {
       id: 3,
       title: "Graphic Design",
       description: "Creative design services to visually communicate your brand's message and identity.",
-      icon: Brush,
+      image: graphicDesignImg,
       features: [
         "Logo design",
         "Branding guidelines",
@@ -45,7 +49,7 @@ const Services = () => {
       id: 4,
       title: "Video Production",
       description: "High-quality video production services to engage your audience and tell your story.",
-      icon: Film,
+      image: videoProductionImg,
       features: [
         "Promotional videos",
         "Corporate videos",
@@ -97,11 +101,14 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.map((service) => {
-              const IconComponent = service.icon;
               return (
                 <Card key={service.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card">
-                  <div className="aspect-video bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                    <IconComponent className="w-16 h-16 text-primary-foreground" />
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <CardHeader>
                     <CardTitle className="text-foreground">{service.title}</CardTitle>

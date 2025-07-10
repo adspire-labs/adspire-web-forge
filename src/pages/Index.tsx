@@ -2,29 +2,33 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Users, Award, Zap, Monitor, Smartphone, Video, Palette, Shield } from "lucide-react";
+import { ArrowRight, Users, Award, Zap, Shield } from "lucide-react";
+import websiteDevImg from "@/assets/website-development.jpg";
+import digitalMarketingImg from "@/assets/digital-marketing.jpg";
+import graphicDesignImg from "@/assets/graphic-design.jpg";
+import videoProductionImg from "@/assets/video-production.jpg";
 
 const Index = () => {
   const services = [
     {
       title: "Website Development",
       description: "Modern, responsive websites that convert visitors into customers",
-      icon: Monitor
+      image: websiteDevImg
     },
     {
       title: "Digital Marketing",
       description: "Strategic campaigns that drive real business growth",
-      icon: Smartphone
+      image: digitalMarketingImg
     },
     {
       title: "Video Production",
       description: "Compelling visual stories that engage your audience",
-      icon: Video
+      image: videoProductionImg
     },
     {
       title: "Graphic Design",
       description: "Brand identity that makes you stand out",
-      icon: Palette
+      image: graphicDesignImg
     }
   ];
 
@@ -98,9 +102,15 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border border-border/50 bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8 text-center">
-                  <service.icon className="h-12 w-12 text-primary mx-auto mb-6" />
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden">
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6 text-center">
                   <h3 className="text-xl font-semibold text-foreground mb-4">{service.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                 </CardContent>
@@ -156,17 +166,17 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-r from-primary via-accent to-secondary text-primary-foreground">
+      <section className="section-padding">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Get Started?</h2>
-          <p className="text-xl mb-12 opacity-90 leading-relaxed">
+          <h2 className="section-title">Ready to Get Started?</h2>
+          <p className="text-xl mb-12 text-muted-foreground leading-relaxed">
             Whether you're a business looking to grow or someone eager to learn new skills, we're here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90">
+            <Button asChild size="lg" className="text-lg px-8 py-6 btn-primary">
               <Link to="/contact">Contact Us</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10">
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 border-border text-foreground hover:bg-muted">
               <Link to="/about">Learn More</Link>
             </Button>
           </div>

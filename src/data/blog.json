@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "slug": "top-5-video-editing-tools-beginners",
+    "title": "Top 5 Video Editing Tools for Beginners",
+    "description": "Discover the best video editing software for those just starting their creative journey.",
+    "content": "Video editing has become an essential skill in today's digital world. Whether you're creating content for social media, YouTube, or professional projects, having the right tools can make all the difference. Here are the top 5 video editing tools perfect for beginners...",
+    "date": "2024-01-15",
+    "category": "Video Editing",
+    "readTime": "5 min read",
+    "author": "Adspire Labs Team",
+    "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 2,
+    "slug": "why-every-business-butwal-needs-digital-marketing",
+    "title": "Why Every Business in Butwal Needs Digital Marketing",
+    "description": "Understanding the importance of digital presence for local businesses in Nepal.",
+    "content": "In today's digital age, businesses in Butwal and across Nepal are realizing the immense potential of digital marketing. With the rapid growth of internet users and smartphone adoption, the landscape of business promotion has fundamentally changed...",
+    "date": "2024-01-10",
+    "category": "Digital Marketing",
+    "readTime": "7 min read",
+    "author": "Adspire Labs Team",
+    "image": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 3,
+    "slug": "graphic-design-tips-local-brands",
+    "title": "Graphic Design Tips for Local Brands",
+    "description": "Essential design principles to make your local brand stand out in the market.",
+    "content": "Creating a strong visual identity is crucial for local brands to compete in today's market. Good graphic design can set your business apart from competitors and create lasting impressions on your customers...",
+    "date": "2024-01-05",
+    "category": "Graphic Design",
+    "readTime": "6 min read",
+    "author": "Adspire Labs Team",
+    "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 4,
+    "slug": "how-ai-changing-content-creation",
+    "title": "How AI is Changing Content Creation",
+    "description": "Exploring the impact of artificial intelligence on modern content creation workflows.",
+    "content": "Artificial Intelligence is revolutionizing the way we create content. From automated video editing to AI-powered design tools, the landscape of content creation is evolving rapidly...",
+    "date": "2024-01-01",
+    "category": "Technology",
+    "readTime": "8 min read",
+    "author": "Adspire Labs Team",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 5,
+    "slug": "social-media-marketing-nepal",
+    "title": "Social Media Marketing Strategies for Nepal",
+    "description": "Effective social media marketing techniques tailored for the Nepali market.",
+    "content": "Social media marketing in Nepal requires understanding local culture, preferences, and digital behavior. Here's how to create effective strategies for the Nepali market...",
+    "date": "2023-12-28",
+    "category": "Digital Marketing",
+    "readTime": "6 min read",
+    "author": "Adspire Labs Team",
+    "image": "https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 6,
+    "slug": "mobile-first-web-design",
+    "title": "Mobile-First Web Design: A Complete Guide",
+    "description": "Learn how to design websites that prioritize mobile user experience.",
+    "content": "With mobile internet usage surpassing desktop, designing with a mobile-first approach has become essential. This comprehensive guide covers everything you need to know...",
+    "date": "2023-12-25",
+    "category": "Technology",
+    "readTime": "9 min read",
+    "author": "Adspire Labs Team",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+  }
+]
