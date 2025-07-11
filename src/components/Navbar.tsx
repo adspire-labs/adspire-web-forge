@@ -29,13 +29,14 @@ export const Navbar = () => {
 <Link to="/" className="flex items-center space-x-2 group">
   <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-transform group-hover:scale-105">
     <img 
-      src="logo/logo.png" 
+      src="/logo/logo.png" 
       alt="Adspire Labs Logo"
       className="h-full w-full object-contain" 
     />
   </div>
   <span className="brand-text text-lg md:text-xl">Adspire Labs</span>
 </Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
