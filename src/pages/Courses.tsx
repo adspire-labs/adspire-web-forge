@@ -3,88 +3,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Clock, Users, Award, BookOpen } from "lucide-react";
+import coursesData from "@/data/courses.json";
 
 const Courses = () => {
-  const courses = [
-    {
-      title: "Digital Marketing Mastery",
-      duration: "2 months",
-      price: "NPR 20,000",
-      description: "Master the art of digital marketing with hands-on training in modern tools and strategies",
-      tools: ["Canva", "CapCut", "AI Tools", "Meta Ads Manager", "Google Analytics"],
-      highlights: [
-        "Social Media Marketing",
-        "Content Creation",
-        "Paid Advertising",
-        "Analytics & Reporting",
-        "AI-powered Marketing"
-      ],
-      icon: "📱"
-    },
-    {
-      title: "Video Editing Professional",
-      duration: "2.5 months", 
-      price: "NPR 25,000",
-      description: "Become a professional video editor with comprehensive training in industry-standard software",
-      tools: ["DaVinci Resolve", "Advance Editing", "Basic Animation", "Basic Color Grading", "Basic Audio Editing"],
-      highlights: [
-        "Professional Video Editing",
-        "Color Correction & Grading",
-        "Motion Graphics",
-        "Audio Synchronization",
-        "Export Optimization"
-      ],
-      icon: "🎬"
-    },
-    {
-      title: "Filmmaking & Video Production",
-      duration: "5 months",
-      price: "NPR 50,000",
-      description: "Complete filmmaking course from pre-production to post-production",
-      tools: ["Camera Operation", "Lighting", "Audio Recording", "Shooting", "Drones", "Editing Software", "Sound Design"],
-      highlights: [
-        "Script Writing",
-        "Camera Techniques",
-        "Lighting Setup",
-        "Sound Design",
-        "Film Editing"
-      ],
-      icon: "🎥"
-    },
-    {
-      title: "Graphic Design Fundamentals",
-      duration: "2 months",
-      price: "NPR 20,000", 
-      description: "Master graphic design principles and create stunning visual communications",
-      tools: ["Adobe Photoshop", "Illustrator", "Canva Pro"],
-      highlights: [
-        "Logo Design",
-        "Brand Identity",
-        "Print Design",
-        "Digital Graphics",
-        "Design Principles"
-      ],
-      icon: "🎨"
-    }
-  ];
+  const courses = coursesData.courses;
+  
+  const iconComponents = {
+    Users: <Users className="h-6 w-6" />,
+    Award: <Award className="h-6 w-6" />,
+    BookOpen: <BookOpen className="h-6 w-6" />
+  };
 
-  const features = [
-    {
-      icon: <Users className="h-6 w-6" />,
-      title: "Small Class Sizes",
-      description: "Maximum 10 students per batch for personalized attention"
-    },
-    {
-      icon: <Award className="h-6 w-6" />,
-      title: "Industry Certification",
-      description: "Recognized certificates to boost your career prospects"
-    },
-    {
-      icon: <BookOpen className="h-6 w-6" />,
-      title: "Practical Learning",
-      description: "Real-world projects and hands-on experience"
-    }
-  ];
+  const features = coursesData.features.map(feature => ({
+    ...feature,
+    icon: iconComponents[feature.icon] || feature.icon
+  }));
 
   return (
     <div className="min-h-screen bg-background">
@@ -153,7 +86,7 @@ const Courses = () => {
                   
                   <div className="flex gap-3">
                     <Button asChild className="flex-1 btn-primary">
-                      <Link to={`/courses/${course.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}`}>
+                      <Link to={`/courses/${course.id}`}>
                         View Details
                       </Link>
                     </Button>

@@ -1,0 +1,173 @@
+{
+  "courses": [
+    {
+      "id": "digital-marketing-mastery",
+      "title": "Digital Marketing Mastery",
+      "duration": "2 months",
+      "price": "NPR 20,000",
+      "description": "Master the art of digital marketing with hands-on training in modern tools and strategies",
+      "icon": "📱",
+      "tools": ["Canva", "CapCut", "AI Tools", "Meta Ads Manager", "Google Analytics"],
+      "highlights": [
+        "Social Media Marketing",
+        "Content Creation",
+        "Paid Advertising",
+        "Analytics & Reporting",
+        "AI-powered Marketing"
+      ],
+      "detailedDescription": "This comprehensive 2-month course covers all aspects of modern digital marketing. You'll learn to create engaging content, run successful ad campaigns, and analyze performance metrics to optimize your marketing efforts.",
+      "curriculum": [
+        {
+          "week": "Week 1-2",
+          "topics": ["Introduction to Digital Marketing", "Social Media Fundamentals", "Content Strategy Basics"]
+        },
+        {
+          "week": "Week 3-4", 
+          "topics": ["Facebook & Instagram Marketing", "Content Creation with Canva", "Basic Video Editing with CapCut"]
+        },
+        {
+          "week": "Week 5-6",
+          "topics": ["Google Ads & Meta Ads Manager", "Campaign Setup & Optimization", "A/B Testing"]
+        },
+        {
+          "week": "Week 7-8",
+          "topics": ["Analytics & Reporting", "AI Tools for Marketing", "Final Project & Portfolio"]
+        }
+      ],
+      "prerequisites": "Basic computer knowledge",
+      "careerOpportunities": ["Social Media Manager", "Digital Marketing Specialist", "Content Creator", "Marketing Analyst"]
+    },
+    {
+      "id": "video-editing-professional",
+      "title": "Video Editing Professional",
+      "duration": "2.5 months",
+      "price": "NPR 25,000", 
+      "description": "Become a professional video editor with comprehensive training in industry-standard software",
+      "icon": "🎬",
+      "tools": ["DaVinci Resolve", "Advance Editing", "Basic Animation", "Basic Color Grading", "Basic Audio Editing"],
+      "highlights": [
+        "Professional Video Editing",
+        "Color Correction & Grading",
+        "Motion Graphics",
+        "Audio Synchronization",
+        "Export Optimization"
+      ],
+      "detailedDescription": "Master professional video editing with DaVinci Resolve. This course takes you from beginner to professional level, covering advanced editing techniques, color grading, and audio editing.",
+      "curriculum": [
+        {
+          "week": "Week 1-3",
+          "topics": ["DaVinci Resolve Interface", "Basic Editing Techniques", "Timeline Management"]
+        },
+        {
+          "week": "Week 4-6",
+          "topics": ["Advanced Editing", "Transitions & Effects", "Multi-camera Editing"]
+        },
+        {
+          "week": "Week 7-8",
+          "topics": ["Color Correction & Grading", "Audio Editing & Mixing", "Basic Motion Graphics"]
+        },
+        {
+          "week": "Week 9-10",
+          "topics": ["Export Settings", "Project Management", "Portfolio Creation"]
+        }
+      ],
+      "prerequisites": "Basic computer skills",
+      "careerOpportunities": ["Video Editor", "Post-Production Specialist", "Content Creator", "Freelance Editor"]
+    },
+    {
+      "id": "filmmaking-video-production",
+      "title": "Filmmaking & Video Production",
+      "duration": "5 months",
+      "price": "NPR 50,000",
+      "description": "Complete filmmaking course from pre-production to post-production",
+      "icon": "🎥",
+      "tools": ["Camera Operation", "Lighting", "Audio Recording", "Shooting", "Drones", "Editing Software", "Sound Design"],
+      "highlights": [
+        "Script Writing",
+        "Camera Techniques", 
+        "Lighting Setup",
+        "Sound Design",
+        "Film Editing"
+      ],
+      "detailedDescription": "A comprehensive filmmaking course covering every aspect of video production. From concept development to final delivery, learn all the skills needed to create professional films and videos.",
+      "curriculum": [
+        {
+          "week": "Month 1",
+          "topics": ["Script Writing", "Pre-production Planning", "Storyboarding", "Equipment Overview"]
+        },
+        {
+          "week": "Month 2",
+          "topics": ["Camera Operation", "Shot Composition", "Lighting Techniques", "Audio Recording"]
+        },
+        {
+          "week": "Month 3",
+          "topics": ["Production Management", "Directing Techniques", "Working with Actors", "Drone Operations"]
+        },
+        {
+          "week": "Month 4",
+          "topics": ["Post-production Workflow", "Advanced Editing", "Color Grading", "Sound Design"]
+        },
+        {
+          "week": "Month 5",
+          "topics": ["Final Project", "Distribution Strategies", "Portfolio Development", "Industry Networking"]
+        }
+      ],
+      "prerequisites": "Basic understanding of video editing",
+      "careerOpportunities": ["Film Director", "Cinematographer", "Producer", "Video Production Specialist"]
+    },
+    {
+      "id": "graphic-design-fundamentals",
+      "title": "Graphic Design Fundamentals",
+      "duration": "2 months",
+      "price": "NPR 20,000",
+      "description": "Master graphic design principles and create stunning visual communications",
+      "icon": "🎨",
+      "tools": ["Adobe Photoshop", "Illustrator", "Canva Pro"],
+      "highlights": [
+        "Logo Design",
+        "Brand Identity", 
+        "Print Design",
+        "Digital Graphics",
+        "Design Principles"
+      ],
+      "detailedDescription": "Learn the fundamentals of graphic design and master industry-standard tools. This course covers design principles, typography, color theory, and practical application in various design projects.",
+      "curriculum": [
+        {
+          "week": "Week 1-2",
+          "topics": ["Design Principles", "Color Theory", "Typography Basics", "Adobe Photoshop Introduction"]
+        },
+        {
+          "week": "Week 3-4",
+          "topics": ["Adobe Illustrator", "Vector Graphics", "Logo Design Process", "Brand Identity Basics"]
+        },
+        {
+          "week": "Week 5-6",
+          "topics": ["Print Design", "Layout Design", "Digital Graphics", "Canva Pro Mastery"]
+        },
+        {
+          "week": "Week 7-8",
+          "topics": ["Portfolio Development", "Client Communication", "Project Management", "Final Projects"]
+        }
+      ],
+      "prerequisites": "Basic computer knowledge",
+      "careerOpportunities": ["Graphic Designer", "Brand Designer", "UI/UX Designer", "Freelance Designer"]
+    }
+  ],
+  "features": [
+    {
+      "icon": "Users",
+      "title": "Small Class Sizes",
+      "description": "Maximum 10 students per batch for personalized attention"
+    },
+    {
+      "icon": "Award", 
+      "title": "Industry Certification",
+      "description": "Recognized certificates to boost your career prospects"
+    },
+    {
+      "icon": "BookOpen",
+      "title": "Practical Learning", 
+      "description": "Real-world projects and hands-on experience"
+    }
+  ]
+}

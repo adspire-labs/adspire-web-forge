@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -67,6 +67,12 @@ export const Footer = () => {
                   training@adspirelabs.com.np
                 </a>
               </p>
+              <p className="text-muted-foreground">
+                <strong className="text-foreground">WhatsApp:</strong><br />
+                <a href="https://wa.me/9779845323733" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                  +977 984-532-3733
+                </a>
+              </p>
             </div>
             
             {/* Social Media */}
@@ -83,7 +89,10 @@ export const Footer = () => {
                  className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-            
+              <a href="https://wa.me/9779845323733" target="_blank" rel="noopener noreferrer" 
+                 className="text-muted-foreground hover:text-primary transition-colors">
+                <MessageCircle className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>

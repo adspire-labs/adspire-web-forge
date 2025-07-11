@@ -6,81 +6,23 @@ import websiteDevImg from "@/assets/website-development.jpg";
 import digitalMarketingImg from "@/assets/digital-marketing.jpg";
 import graphicDesignImg from "@/assets/graphic-design.jpg";
 import videoProductionImg from "@/assets/video-production.jpg";
+import servicesData from "@/data/services.json";
 
 const Services = () => {
-  const services = [
-    {
-      id: 1,
-      title: "Website Development",
-      description: "Crafting responsive and user-friendly websites tailored to your business needs.",
-      image: websiteDevImg,
-      features: [
-        "Custom website design",
-        "E-commerce solutions",
-        "SEO optimization",
-        "Mobile responsiveness",
-      ],
-    },
-    {
-      id: 2,
-      title: "Digital Marketing",
-      description: "Strategic marketing solutions to enhance your online presence and drive conversions.",
-      image: digitalMarketingImg,
-      features: [
-        "Social media marketing",
-        "Search engine optimization",
-        "Content marketing",
-        "Email marketing",
-      ],
-    },
-    {
-      id: 3,
-      title: "Graphic Design",
-      description: "Creative design services to visually communicate your brand's message and identity.",
-      image: graphicDesignImg,
-      features: [
-        "Logo design",
-        "Branding guidelines",
-        "Marketing collateral",
-        "UI/UX design",
-      ],
-    },
-    {
-      id: 4,
-      title: "Video Production",
-      description: "High-quality video production services to engage your audience and tell your story.",
-      image: videoProductionImg,
-      features: [
-        "Promotional videos",
-        "Corporate videos",
-        "Event coverage",
-        "Animation",
-      ],
-    },
-  ];
+  // Map imported images to services data
+  const imageMap = {
+    "/src/assets/website-development.jpg": websiteDevImg,
+    "/src/assets/digital-marketing.jpg": digitalMarketingImg,
+    "/src/assets/graphic-design.jpg": graphicDesignImg,
+    "/src/assets/video-production.jpg": videoProductionImg,
+  };
 
-  const processSteps = [
-    {
-      id: 1,
-      title: "Discovery",
-      description: "We start by understanding your business goals and target audience.",
-    },
-    {
-      id: 2,
-      title: "Planning",
-      description: "Developing a strategic plan tailored to your specific needs and objectives.",
-    },
-    {
-      id: 3,
-      title: "Execution",
-      description: "Implementing the plan with precision and creativity to achieve optimal results.",
-    },
-    {
-      id: 4,
-      title: "Optimization",
-      description: "Continuously monitoring and optimizing performance to maximize your ROI.",
-    },
-  ];
+  const services = servicesData.services.map(service => ({
+    ...service,
+    image: imageMap[service.image] || service.image
+  }));
+
+  const processSteps = servicesData.processSteps;
 
   return (
     <div className="min-h-screen bg-background">
