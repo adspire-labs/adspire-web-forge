@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Users, Award, Zap, Shield } from "lucide-react";
+import { ArrowRight, Users, Award, Zap, Shield, BookOpen } from "lucide-react";
 import websiteDevImg from "@/assets/website-development.jpg";
 import digitalMarketingImg from "@/assets/digital-marketing.jpg";
 import graphicDesignImg from "@/assets/graphic-design.jpg";
@@ -165,10 +165,36 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding">
+      {/* Course Materials Notice */}
+      <section className="section-padding bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 border-y border-blue-200 dark:border-blue-800">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="section-title">Ready to Get Started?</h2>
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full mb-6">
+            <span className="text-2xl">📚</span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Course Materials & Resources
+          </h2>
+          <p className="text-lg text-muted-foreground mb-6">
+            Access additional study materials, course resources, and supplementary content to enhance your learning experience.
+          </p>
+          <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+            <a 
+              href="https://pu-study-hub.vercel.app/additional-resources" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center"
+            >
+              <BookOpen className="w-5 h-5 mr-2" />
+              Visit Study Hub
+            </a>
+          </Button>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-muted/50">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Ready to Get Started?</h2>
           <p className="text-xl mb-12 text-muted-foreground leading-relaxed">
             Whether you're a business looking to grow or someone eager to learn new skills, we're here to help.
           </p>

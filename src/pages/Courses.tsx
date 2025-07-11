@@ -151,9 +151,16 @@ const Courses = () => {
                     </div>
                   </div>
                   
-                  <Button asChild className="w-full btn-primary">
-                    <Link to="/contact">Enroll Now</Link>
-                  </Button>
+                  <div className="flex gap-3">
+                    <Button asChild className="flex-1 btn-primary">
+                      <Link to={`/courses/${course.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}`}>
+                        View Details
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" className="flex-1 border-border text-foreground hover:bg-muted">
+                      <Link to="/contact">Enroll Now</Link>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
