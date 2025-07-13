@@ -6,8 +6,7 @@
       "duration": "2 months",
       "price": "NPR 20,000",
       "description": "Master the art of digital marketing with hands-on training in modern tools and strategies",
-      "icon": "Smartphone",
-      "image": "/assets/digital-marketing.jpg",
+      "icon": "📱",
       "tools": ["Canva", "CapCut", "AI Tools", "Meta Ads Manager", "Google Analytics"],
       "highlights": [
         "Social Media Marketing",
@@ -44,8 +43,7 @@
       "duration": "2.5 months",
       "price": "NPR 25,000", 
       "description": "Become a professional video editor with comprehensive training in industry-standard software",
-      "icon": "Video",
-      "image": "/assets/video-production.jpg",
+      "icon": "🎬",
       "tools": ["DaVinci Resolve", "Advance Editing", "Basic Animation", "Basic Color Grading", "Basic Audio Editing"],
       "highlights": [
         "Professional Video Editing",
@@ -82,8 +80,7 @@
       "duration": "5 months",
       "price": "NPR 50,000",
       "description": "Complete filmmaking course from pre-production to post-production",
-      "icon": "Camera",
-      "image": "/assets/video-production.jpg",
+      "icon": "🎥",
       "tools": ["Camera Operation", "Lighting", "Audio Recording", "Shooting", "Drones", "Editing Software", "Sound Design"],
       "highlights": [
         "Script Writing",
@@ -124,8 +121,7 @@
       "duration": "2 months",
       "price": "NPR 20,000",
       "description": "Master graphic design principles and create stunning visual communications",
-      "icon": "Palette",
-      "image": "/assets/graphic-design.jpg",
+      "icon": "🎨",
       "tools": ["Adobe Photoshop", "Illustrator", "Canva Pro"],
       "highlights": [
         "Logo Design",

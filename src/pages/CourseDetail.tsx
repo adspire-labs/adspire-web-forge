@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Users, Award, BookOpen, CheckCircle, ArrowLeft, MessageCircle, Smartphone, Video, Camera, Palette } from "lucide-react";
+import { Clock, Users, Award, BookOpen, CheckCircle, ArrowLeft, MessageCircle } from "lucide-react";
 import coursesData from "@/data/courses.json";
 
 const CourseDetail = () => {
@@ -27,28 +27,10 @@ const CourseDetail = () => {
   const whatsappMessage = `Hi! I'm interested in the ${course.title} course. Can you provide more details about enrollment and schedule?`;
   const whatsappUrl = `https://wa.me/9779845323733?text=${encodeURIComponent(whatsappMessage)}`;
 
-  const iconComponents = {
-    Smartphone: <Smartphone className="h-16 w-16" />,
-    Video: <Video className="h-16 w-16" />,
-    Camera: <Camera className="h-16 w-16" />,
-    Palette: <Palette className="h-16 w-16" />
-  };
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative section-padding overflow-hidden">
-        {/* Background Image with Blur */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: `url(${course.image})`,
-            filter: 'blur(15px)',
-            transform: 'scale(1.1)'
-          }}
-        />
-        <div className="absolute inset-0 bg-background/80" />
-        <div className="relative z-10">
+      <section className="section-padding bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <Link to="/courses" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
@@ -58,10 +40,8 @@ const CourseDetail = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in-left">
-              <div className="mb-6 text-primary">
-                {iconComponents[course.icon]}
-              </div>
+            <div>
+              <div className="text-6xl mb-6">{course.icon}</div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">{course.title}</h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">{course.description}</p>
               
@@ -88,7 +68,7 @@ const CourseDetail = () => {
               </div>
             </div>
             
-            <div className="space-y-6 animate-slide-in-right">
+            <div className="space-y-6">
               <Card className="bg-card border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center text-foreground">
@@ -109,7 +89,6 @@ const CourseDetail = () => {
               </Card>
             </div>
           </div>
-        </div>
         </div>
       </section>
 

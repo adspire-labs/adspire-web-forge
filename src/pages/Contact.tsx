@@ -25,8 +25,7 @@ const Contact = () => {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-8">Get in Touch</h2>
               <div className="space-y-6">
-                <Card className="border-border bg-card hover:scale-105 transition-transform duration-300 animate-fade-in"
-                  style={{ animationDelay: '0.1s' }}>
+                <Card className="border-border bg-card">
                   <CardHeader>
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -40,8 +39,7 @@ const Contact = () => {
                   </CardHeader>
                 </Card>
 
-                <Card className="border-border bg-card hover:scale-105 transition-transform duration-300 animate-fade-in"
-                  style={{ animationDelay: '0.2s' }}>
+                <Card className="border-border bg-card">
                   <CardHeader>
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
@@ -55,8 +53,7 @@ const Contact = () => {
                   </CardHeader>
                 </Card>
 
-                <Card className="border-border bg-card hover:scale-105 transition-transform duration-300 animate-fade-in"
-                  style={{ animationDelay: '0.3s' }}>
+                <Card className="border-border bg-card">
                   <CardHeader>
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
@@ -112,8 +109,7 @@ const Contact = () => {
               <h2 className="text-3xl font-bold text-foreground mb-8">Send Us a Message</h2>
               
               {/* Business WhatsApp Contact */}
-              <Card className="mb-8 border-border bg-card hover:scale-105 transition-transform duration-300 animate-fade-in"
-                style={{ animationDelay: '0.4s' }}>
+              <Card className="mb-8 border-border bg-card">
                 <CardHeader>
                   <CardTitle className="text-foreground">Business Inquiries</CardTitle>
                   <CardDescription>
@@ -139,8 +135,7 @@ const Contact = () => {
               </Card>
 
               {/* Course WhatsApp Contact */}
-              <Card className="border-border bg-card hover:scale-105 transition-transform duration-300 animate-fade-in"
-                style={{ animationDelay: '0.5s' }}>
+              <Card className="border-border bg-card">
                 <CardHeader>
                   <CardTitle className="text-foreground">Course Applications</CardTitle>
                   <CardDescription>

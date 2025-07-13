@@ -55,13 +55,12 @@ const Blog = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {filteredPosts.map((post) => {
               return (
-                <Card key={post.id} className="hover:shadow-xl hover:scale-[1.02] transition-all duration-300 overflow-hidden border-border bg-card animate-fade-in group"
-                  style={{ animationDelay: `${post.id * 0.1}s` }}>
+                <Card key={post.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card">
                   <div className="aspect-video overflow-hidden">
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <CardHeader>
