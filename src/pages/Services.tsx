@@ -25,7 +25,7 @@ const Services = () => {
   const processSteps = servicesData.processSteps;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       {/* Hero Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,12 +44,13 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.map((service) => {
               return (
-                <Card key={service.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card">
+                <Card key={service.id} className="hover:shadow-xl hover:scale-[1.02] transition-all duration-300 overflow-hidden border-border bg-card animate-fade-in group"
+                  style={{ animationDelay: `${service.id * 0.1}s` }}>
                   <div className="aspect-video overflow-hidden">
                     <img 
-                      src={service.image} 
+                      src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <CardHeader>
@@ -84,8 +85,9 @@ const Services = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step) => (
-              <div key={step.id} className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={step.id} className="text-center animate-fade-in hover:scale-105 transition-transform duration-300"
+                style={{ animationDelay: `${step.id * 0.1}s` }}>
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary/90 transition-colors duration-300">
                   <span className="text-primary-foreground text-2xl font-bold">{step.id}</span>
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>

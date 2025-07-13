@@ -119,7 +119,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       {/* Hero Section - Unchanged */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -172,7 +172,8 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 bg-card border-border">
+              <Card key={index} className="text-center hover:shadow-lg hover:scale-105 transition-all duration-300 bg-card border-border animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader>
                   <value.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                   <CardTitle className="text-foreground">{value.title}</CardTitle>
@@ -195,7 +196,8 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 bg-card border-border">
+              <Card key={index} className="text-center hover:shadow-lg hover:scale-105 transition-all duration-300 bg-card border-border animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader>
                   {/* Circular image container - automatically sizes and crops to circle */}
                   <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md bg-white">
@@ -226,7 +228,8 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partners.map((partner, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow duration-300 bg-card border-border">
+              <Card key={index} className="hover:shadow-xl hover:scale-[1.02] transition-all duration-300 bg-card border-border animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader>
                   <div className="flex items-center space-x-4">
                     {/* Circular partner logo - automatically sizes and crops to circle */}
@@ -263,7 +266,8 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="group overflow-hidden hover:shadow-lg transition-all duration-300 bg-card border-border">
+              <Card key={index} className="group overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-300 bg-card border-border animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={item.image} 
