@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, Star } fro
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       {/* Hero Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

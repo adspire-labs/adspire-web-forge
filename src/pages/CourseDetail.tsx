@@ -35,7 +35,7 @@ const CourseDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background animate-fade-in">
       {/* Hero Section */}
       <section className="relative section-padding overflow-hidden">
         {/* Background Image with Blur */}
