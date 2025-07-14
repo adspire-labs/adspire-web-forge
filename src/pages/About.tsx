@@ -123,8 +123,8 @@ const About = () => {
       {/* Hero Section - Unchanged */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">About Adspire Labs</h1>
+          <div className="text-center animate-fade-in">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-scale-in">About Adspire Labs</h1>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-3xl mx-auto">
               Empowering businesses and individuals through innovative digital solutions and comprehensive education
             </p>
@@ -172,7 +172,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 bg-card border-border">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 bg-card border-border hover-scale animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
                 <CardHeader>
                   <value.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                   <CardTitle className="text-foreground">{value.title}</CardTitle>

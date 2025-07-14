@@ -45,52 +45,54 @@ const CourseDetail = () => {
             alt={course.title}
             className="w-full h-full object-cover blur-sm scale-110"
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/70 dark:bg-black/60"></div>
         </div>
         
         {/* Content */}
         <div className="relative z-10 section-padding">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-6">
-              <Link to="/courses" className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+              <Link to="/courses" className="inline-flex items-center text-white hover:text-white/80 transition-colors animate-fade-in">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Courses
               </Link>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg inline-block mb-6">
-                  {iconComponents[course.icon]}
+              <div className="animate-fade-in">
+                <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg inline-block mb-6 border border-white/30">
+                  <div className="text-white">
+                    {iconComponents[course.icon]}
+                  </div>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{course.title}</h1>
-                <p className="text-xl text-white/90 mb-8 leading-relaxed">{course.description}</p>
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-scale-in">{course.title}</h1>
+                <p className="text-xl text-white mb-8 leading-relaxed animate-fade-in">{course.description}</p>
                 
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
+                <div className="flex flex-wrap gap-4 mb-8 animate-fade-in">
+                  <div className="flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-4 py-2">
                     <Clock className="w-5 h-5 text-white mr-2" />
                     <span className="font-semibold text-white">{course.duration}</span>
                   </div>
-                  <div className="flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
+                  <div className="flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-4 py-2">
                     <span className="text-2xl font-bold text-white">{course.price}</span>
                   </div>
                 </div>
               
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
+                <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
+                  <Button asChild size="lg" className="bg-white text-black hover:bg-white/90 border-0 hover-scale">
                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                      <MessageCircle className="w-5 h-5 mr-2" />
+                      <MessageCircle className="w-5 h-5 mr-2 text-black" />
                       Enroll via WhatsApp
                     </a>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10">
+                  <Button asChild variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300">
                     <Link to="/contact">Contact Us</Link>
                   </Button>
                 </div>
               </div>
             
-              <div className="space-y-6">
-                <Card className="bg-white/10 backdrop-blur-sm border border-white/20">
+              <div className="space-y-6 animate-fade-in">
+                <Card className="bg-white/20 backdrop-blur-sm border border-white/30 hover-scale">
                   <CardHeader>
                     <CardTitle className="flex items-center text-white">
                       <Award className="w-5 h-5 mr-2 text-white" />
@@ -100,7 +102,7 @@ const CourseDetail = () => {
                   <CardContent>
                     <ul className="space-y-3">
                       {course.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-center text-white/90">
+                        <li key={idx} className="flex items-center text-white">
                           <CheckCircle className="w-4 h-4 text-white mr-3 flex-shrink-0" />
                           {highlight}
                         </li>
@@ -117,14 +119,14 @@ const CourseDetail = () => {
       {/* Course Modules */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Course Curriculum</h2>
             <p className="text-xl text-muted-foreground">Detailed breakdown of what you'll learn</p>
           </div>
           
           <div className="space-y-6">
             {course.curriculum.map((module, index) => (
-              <Card key={index} className="bg-card border-border hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="bg-card border-border hover:shadow-lg transition-all duration-300 hover-scale animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
                 <CardHeader>
                   <CardTitle className="text-foreground">{module.week}</CardTitle>
                 </CardHeader>

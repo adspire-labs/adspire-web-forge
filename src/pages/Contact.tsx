@@ -8,7 +8,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="section-header">
+          <div className="section-header animate-fade-in">
             <h1 className="section-title">Contact Us</h1>
             <p className="section-subtitle">
               Ready to start your creative journey? Get in touch with us today
@@ -22,7 +22,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Details */}
-            <div>
+            <div className="animate-fade-in">
               <h2 className="text-3xl font-bold text-foreground mb-8">Get in Touch</h2>
               <div className="space-y-6">
                 <Card className="border-border bg-card">
@@ -105,7 +105,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Forms */}
-            <div>
+            <div className="animate-fade-in" style={{animationDelay: '200ms'}}>
               <h2 className="text-3xl font-bold text-foreground mb-8">Send Us a Message</h2>
               
               {/* Business WhatsApp Contact */}
