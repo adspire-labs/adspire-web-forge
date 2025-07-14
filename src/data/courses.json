@@ -45,7 +45,7 @@
       "price": "NPR 25,000", 
       "description": "Become a professional video editor with comprehensive training in industry-standard software",
       "icon": "Video",
-      "image": "/src/assets/video-production.jpg",
+      "image": "assets/video-production.jpg",
       "tools": ["DaVinci Resolve", "Advance Editing", "Basic Animation", "Basic Color Grading", "Basic Audio Editing"],
       "highlights": [
         "Professional Video Editing",
