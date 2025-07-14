@@ -44,7 +44,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative bg-background pt-20 pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center max-w-4xl mx-auto animate-scale-in">
+          <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
               Creative Agency in <span className="text-primary">Butwal</span>
             </h1>

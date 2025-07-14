@@ -19,7 +19,7 @@ const Blog = () => {
       {/* Hero Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="section-header animate-fade-in">
+          <div className="section-header">
             <h1 className="section-title">Our Blog</h1>
             <p className="section-subtitle">
               Insights, tips, and trends in digital marketing, design, and video production
@@ -53,9 +53,9 @@ const Blog = () => {
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {filteredPosts.map((post, index) => {
+            {filteredPosts.map((post) => {
               return (
-                <Card key={post.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card hover-scale animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
+                <Card key={post.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card">
                   <div className="aspect-video overflow-hidden">
                     <img 
                       src={post.image} 

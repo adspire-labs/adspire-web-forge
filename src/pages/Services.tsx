@@ -29,7 +29,7 @@ const Services = () => {
       {/* Hero Section */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="section-header animate-fade-in">
+          <div className="section-header">
             <h1 className="section-title">Our Services</h1>
             <p className="section-subtitle">
               Comprehensive digital solutions to grow your business and brand
@@ -42,9 +42,9 @@ const Services = () => {
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => {
+            {services.map((service) => {
               return (
-                <Card key={service.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card hover-scale animate-fade-in" style={{animationDelay: `${index * 100}ms`}}>
+                <Card key={service.id} className="hover:shadow-xl transition-shadow duration-300 overflow-hidden border-border bg-card">
                   <div className="aspect-video overflow-hidden">
                     <img 
                       src={service.image} 
