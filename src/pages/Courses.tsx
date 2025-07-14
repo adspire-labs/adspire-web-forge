@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Clock, Users, Award, BookOpen } from "lucide-react";
+import { Clock, Users, Award, BookOpen, Smartphone, Video, Camera, Palette } from "lucide-react";
 import coursesData from "@/data/courses.json";
 
 const Courses = () => {
@@ -11,7 +11,11 @@ const Courses = () => {
   const iconComponents = {
     Users: <Users className="h-6 w-6" />,
     Award: <Award className="h-6 w-6" />,
-    BookOpen: <BookOpen className="h-6 w-6" />
+    BookOpen: <BookOpen className="h-6 w-6" />,
+    Smartphone: <Smartphone className="h-8 w-8" />,
+    Video: <Video className="h-8 w-8" />,
+    Camera: <Camera className="h-8 w-8" />,
+    Palette: <Palette className="h-8 w-8" />
   };
 
   const features = coursesData.features.map(feature => ({
@@ -43,10 +47,20 @@ const Courses = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {courses.map((course, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 bg-card border-border">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 bg-card border-border overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={course.image} 
+                    alt={course.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground p-2 rounded-lg">
+                    {iconComponents[course.icon]}
+                  </div>
+                </div>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-4xl">{course.icon}</span>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-primary">{course.price}</div>
                       <div className="text-sm text-muted-foreground flex items-center">

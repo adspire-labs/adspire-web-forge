@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Users, Award, BookOpen, CheckCircle, ArrowLeft, MessageCircle } from "lucide-react";
+import { Clock, Users, Award, BookOpen, CheckCircle, ArrowLeft, MessageCircle, Smartphone, Video, Camera, Palette } from "lucide-react";
 import coursesData from "@/data/courses.json";
 
 const CourseDetail = () => {
@@ -9,6 +9,13 @@ const CourseDetail = () => {
   
   // Find course by ID from JSON data
   const course = coursesData.courses.find(c => c.id === courseSlug);
+
+  const iconComponents = {
+    Smartphone: <Smartphone className="h-8 w-8" />,
+    Video: <Video className="h-8 w-8" />,
+    Camera: <Camera className="h-8 w-8" />,
+    Palette: <Palette className="h-8 w-8" />
+  };
 
   if (!course) {
     return (
@@ -29,64 +36,79 @@ const CourseDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6">
-            <Link to="/courses" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Courses
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="text-6xl mb-6">{course.icon}</div>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">{course.title}</h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">{course.description}</p>
-              
-              <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center bg-card border border-border rounded-lg px-4 py-2">
-                  <Clock className="w-5 h-5 text-primary mr-2" />
-                  <span className="font-semibold text-foreground">{course.duration}</span>
-                </div>
-                <div className="flex items-center bg-card border border-border rounded-lg px-4 py-2">
-                  <span className="text-2xl font-bold text-primary">{course.price}</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="btn-primary">
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    Enroll via WhatsApp
-                  </a>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-border text-foreground hover:bg-muted">
-                  <Link to="/contact">Contact Us</Link>
-                </Button>
-              </div>
+      {/* Hero Section with Blurred Background */}
+      <section className="relative overflow-hidden">
+        {/* Blurred Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={course.image} 
+            alt={course.title}
+            className="w-full h-full object-cover blur-sm scale-110"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 section-padding">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6">
+              <Link to="/courses" className="inline-flex items-center text-white/80 hover:text-white transition-colors">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Courses
+              </Link>
             </div>
             
-            <div className="space-y-6">
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-foreground">
-                    <Award className="w-5 h-5 mr-2 text-primary" />
-                    Course Highlights
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {course.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-center text-muted-foreground">
-                        <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg inline-block mb-6">
+                  {iconComponents[course.icon]}
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{course.title}</h1>
+                <p className="text-xl text-white/90 mb-8 leading-relaxed">{course.description}</p>
+                
+                <div className="flex flex-wrap gap-4 mb-8">
+                  <div className="flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
+                    <Clock className="w-5 h-5 text-white mr-2" />
+                    <span className="font-semibold text-white">{course.duration}</span>
+                  </div>
+                  <div className="flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2">
+                    <span className="text-2xl font-bold text-white">{course.price}</span>
+                  </div>
+                </div>
+              
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      Enroll via WhatsApp
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10">
+                    <Link to="/contact">Contact Us</Link>
+                  </Button>
+                </div>
+              </div>
+            
+              <div className="space-y-6">
+                <Card className="bg-white/10 backdrop-blur-sm border border-white/20">
+                  <CardHeader>
+                    <CardTitle className="flex items-center text-white">
+                      <Award className="w-5 h-5 mr-2 text-white" />
+                      Course Highlights
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {course.highlights.map((highlight, idx) => (
+                        <li key={idx} className="flex items-center text-white/90">
+                          <CheckCircle className="w-4 h-4 text-white mr-3 flex-shrink-0" />
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
