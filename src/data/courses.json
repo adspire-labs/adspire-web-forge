@@ -7,7 +7,7 @@
       "price": "NPR 20,000",
       "description": "Master the art of digital marketing with hands-on training in modern tools and strategies",
       "icon": "Smartphone",
-        "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "image": "/assets/digital-marketing.jpg",
       "tools": ["Canva", "CapCut", "AI Tools", "Meta Ads Manager", "Google Analytics"],
       "highlights": [
         "Social Media Marketing",
@@ -83,7 +83,7 @@
       "price": "NPR 50,000",
       "description": "Complete filmmaking course from pre-production to post-production",
       "icon": "Camera",
-      "image": "/src/assets/video-production.jpg",
+      "image": "assets/video-production.jpg",
       "tools": ["Camera Operation", "Lighting", "Audio Recording", "Shooting", "Drones", "Editing Software", "Sound Design"],
       "highlights": [
         "Script Writing",
@@ -125,7 +125,7 @@
       "price": "NPR 20,000",
       "description": "Master graphic design principles and create stunning visual communications",
       "icon": "Palette",
-      "image": "/src/assets/graphic-design.jpg",
+      "image": "assets/graphic-design.jpg",
       "tools": ["Adobe Photoshop", "Illustrator", "Canva Pro"],
       "highlights": [
         "Logo Design",
