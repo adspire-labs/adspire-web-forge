@@ -45,7 +45,7 @@ const CourseDetail = () => {
             alt={course.title}
             className="w-full h-full object-cover blur-sm scale-110"
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/70 dark:bg-black/60"></div>
         </div>
         
         {/* Content */}
@@ -60,8 +60,10 @@ const CourseDetail = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg inline-block mb-6">
-                  {iconComponents[course.icon]}
+                <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg inline-block mb-6 border border-white/30">
+                  <div className="text-white [&>svg]:text-white">
+                    {iconComponents[course.icon]}
+                  </div>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{course.title}</h1>
                 <p className="text-xl text-white/90 mb-8 leading-relaxed">{course.description}</p>
@@ -83,7 +85,7 @@ const CourseDetail = () => {
                       Enroll via WhatsApp
                     </a>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10">
+                  <Button asChild variant="outline" size="lg" className="border-white/40 bg-white/10 text-white hover:bg-white/20 hover:border-white/60 backdrop-blur-sm">
                     <Link to="/contact">Contact Us</Link>
                   </Button>
                 </div>
