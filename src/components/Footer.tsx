@@ -70,7 +70,7 @@ export const Footer = () => {
               <p className="text-muted-foreground">
                 <strong className="text-foreground">WhatsApp:</strong><br />
                 <a href="https://wa.me/9779845323733" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-                  +977 984-532-3733
+                  +977 9845323733
                 </a>
               </p>
             </div>
