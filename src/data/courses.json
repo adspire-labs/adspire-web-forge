@@ -77,6 +77,68 @@
       "careerOpportunities": ["Video Editor", "Post-Production Specialist", "Content Creator", "Freelance Editor"]
     },
     {
+  "id": "creative-editing-production",
+  "title": "Creative Video Editing & Production Basics",
+  "duration": "3 months",
+  "price": "NPR 35,000",
+  "description": "Blend the art of editing with foundational production knowledge to become a versatile content creator.",
+  "icon": "Camera",
+  "image": "https://images.unsplash.com/photo-1636971828014-0f3493cba88a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "tools": [
+    "DaVinci Resolve",
+    "Camera Basics",
+    "Production Theory",
+    "Motion Graphics",
+    "Color Correction",
+    "Audio Sync & Mix"
+  ],
+  "highlights": [
+    "Creative Video Editing",
+    "Camera Shot Theory",
+    "Production Planning Basics",
+    "Motion Graphics & Titles",
+    "Color & Audio Enhancement"
+  ],
+  "detailedDescription": "This course builds on video editing fundamentals and adds practical production knowledge. Students will master DaVinci Resolve while learning how to plan shots, understand visual storytelling, and integrate motion graphics. Ideal for editors, creators, and pre-filmmakers aiming to create complete visual stories.",
+  "curriculum": [
+    {
+      "week": "Month 1",
+      "topics": [
+        "Editing Environment Setup",
+        "DaVinci Resolve Essentials",
+        "Basic Cuts & Timeline Tools",
+        "Introduction to Visual Storytelling"
+      ]
+    },
+    {
+      "week": "Month 2",
+      "topics": [
+        "Types of Shots (Wide, Close, POV, etc.)",
+        "Camera Movement Theory",
+        "Using Stock Footage Practically",
+        "Color Correction & Sound Syncing"
+      ]
+    },
+    {
+      "week": "Month 3",
+      "topics": [
+        "Basic Motion Graphics (Lower Thirds, Titles, Transitions)",
+        "Dynamic Edits with Music",
+        "Export Optimization",
+        "Mini Project: 1-Minute Visual Story"
+      ]
+    }
+  ],
+  "prerequisites": "Basic computer skills and interest in video content",
+  "careerOpportunities": [
+    "Creative Video Editor",
+    "Junior Content Director",
+    "Reels & Shorts Creator",
+    "Assistant Video Producer"
+  ]
+} , 
+
+    {
       "id": "filmmaking-video-production",
       "title": "Filmmaking & Video Production",
       "duration": "5 months",
