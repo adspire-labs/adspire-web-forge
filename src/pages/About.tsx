@@ -6,25 +6,25 @@ const About = () => {
     {
       name: "Saroj Pokhrel",
       role: "Founder",
-      description: "Visionary leader with 3+ years in digital innovation",
+      description: "Filmmaker trained at the University of Colorado Boulder, certified DaVinci Resolve trainer, with 8+ years of editing experience—leading Adspire Labs with creative vision.",
       image: "/team/saroj.jpg" // Path to team member image
     },
     {
       name: "Sandip Bhusal",
       role: "CMO",
-      description: "Skilled developers creating cutting-edge solutions",
+      description: "Experienced marketer with 5+ years in branding, promotion, and strategy—leading growth and communication at Adspire Labs.",
       image: "/team/sandip.png" // Path to team member image
     },
     {
       name: "Riya Chaudhary",
       role: "COO",
-      description: "Artists crafting beautiful and functional designs",
+      description: "COO of Adspire Labs, skilled graphic designer, video editor, and pre-production expert—combining creative strategy with visual storytelling and operational leadership.",
       image: "/team/riya.png" // Path to team member image
     },
     {
-      name: "Camera Crew",
-      role: "Rabin & Team",
-      description: "Experts driving business growth through digital channels",
+      name: "Rabin & Team",
+      role: "Camera Crew",
+      description: "Videographer and photographer with 5+ years of experience—capturing compelling visuals that bring stories to life at Adspire Labs.",
       image: "/team/rabin.jpg" // Path to team member image
     }
   ];
