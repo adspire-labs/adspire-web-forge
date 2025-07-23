@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import VerifyCertificate from "./pages/VerifyCertificate";
+import VerifyCoupon from "./pages/VerifyCoupon"; // Add this import
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +42,7 @@ const App = () => (
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/verify-certificate" element={<VerifyCertificate />} />
+                <Route path="/verify-coupon" element={<VerifyCoupon />} /> {/* Add this route */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

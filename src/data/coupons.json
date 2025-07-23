@@ -1,0 +1,67 @@
+{
+  "coupons": [
+    {
+      "couponCode": "SUMMER25",
+      "validFrom": "2024-06-01",
+      "validUntil": "2024-08-31",
+      "discountPercentage": 25,
+      "status": "active"
+    },
+    {
+      "couponCode": "WELCOME10",
+      "validFrom": "2024-01-01",
+      "validUntil": "2024-12-31",
+      "discountPercentage": 10,
+      "status": "active"
+    },
+    {
+      "couponCode": "EARLYBIRD30",
+      "validFrom": "2025-05-01",
+      "validUntil": "2026-10-31",
+      "discountPercentage": 30,
+      "status": "active"
+    },
+    {
+      "couponCode": "VIP50",
+      "validFrom": "2024-07-01",
+      "validUntil": "2024-07-31",
+      "discountPercentage": 50,
+      "status": "used"
+    },
+    {
+    "couponCode": "NHI27QX",
+    "validFrom": "2025-08-01",
+    "validUntil": "2025-08-30",
+    "discountPercentage": 10,
+    "status": "active"
+  },
+  {
+    "couponCode": "NHI63PL",
+    "validFrom": "2025-08-01",
+    "validUntil": "2025-08-30",
+    "discountPercentage": 10,
+    "status": "active"
+  },
+  {
+    "couponCode": "NHI45NM",
+    "validFrom": "2025-08-01",
+    "validUntil": "2025-08-30",
+    "discountPercentage": 10,
+    "status": "active"
+  },
+  {
+    "couponCode": "NHI88ZT",
+    "validFrom": "2025-08-01",
+    "validUntil": "2025-08-30",
+    "discountPercentage": 10,
+    "status": "active"
+  },
+  {
+    "couponCode": "NHI51KV",
+    "validFrom": "2025-08-01",
+    "validUntil": "2025-08-30",
+    "discountPercentage": 10,
+    "status": "active"
+  }
+  ]
+}

@@ -73,6 +73,14 @@ const Index = () => {
                 </Link>
               </Button>
             </div>
+            <div className="mt-8">
+              <Button asChild variant="ghost" className="text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50">
+                <Link to="/verify-coupon" className="flex items-center">
+                  <Shield className="mr-2 h-4 w-4" />
+                  Check Coupon Code
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
