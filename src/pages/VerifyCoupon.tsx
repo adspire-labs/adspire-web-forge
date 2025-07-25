@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, CheckCircle, XCircle, QrCode } from 'lucide-react';
+import { Search, CheckCircle, XCircle, QrCode, MessageCircle } from 'lucide-react'; // Added MessageCircle
 import couponsData from '@/data/coupons.json';
 
 interface Coupon {
@@ -28,7 +28,6 @@ const CouponVerification = () => {
     if (!couponCode.trim()) return;
     
     setIsLoading(true);
-    // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     const found = couponsData.coupons.find(
@@ -76,6 +75,17 @@ const CouponVerification = () => {
     handleSearch();
   };
 
+  // WhatsApp share function
+  const handleWhatsAppShare = () => {
+    if (!searchResult) return;
+    
+    const phoneNumber = "919876543210"; // Replace with your WhatsApp number
+    const message = `Hello Adspire Labs! I'd like to use coupon code: ${searchResult.couponCode} for ${searchResult.discountPercentage}% discount. Please verify and assist.`;
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   // Reset search state when input changes
   useEffect(() => {
     if (couponCode) {
@@ -106,7 +116,7 @@ const CouponVerification = () => {
         );
         
         const imageData = context?.getImageData(0, 0, canvas.width, canvas.height);
-        // Simple QR detection simulation (in real app use a library like jsQR)
+        // Simple QR detection simulation
         if (imageData && Math.random() > 0.9) {
           const fakeCode = `CPN-${Math.floor(1000 + Math.random() * 9000)}`;
           handleScan(fakeCode);
@@ -131,20 +141,15 @@ const CouponVerification = () => {
     });
   };
 
-  // Check coupon validity - Corrected logic
+  // Check coupon validity
   const checkCouponValidity = (coupon: Coupon) => {
     const now = new Date();
     const validFrom = new Date(coupon.validFrom);
     const validUntil = new Date(coupon.validUntil);
     
-    // First check explicit status
     if (coupon.status === 'used') return 'used';
-    
-    // Then check dates regardless of status
     if (now < validFrom) return 'not-started';
     if (now > validUntil) return 'expired';
-    
-    // Only return 'valid' if status is active AND within date range
     return coupon.status === 'active' ? 'valid' : 'expired';
   };
 
@@ -270,13 +275,26 @@ const CouponVerification = () => {
                     return (
                       <Card className={getCardColor(validityStatus)}>
                         <CardContent className="p-6">
-                          <div className="flex items-center mb-4">
-                            {getStatusIcon(validityStatus)}
-                            <h3 className="text-lg font-semibold">
-                              {validityStatus === 'valid' 
-                                ? "Coupon Valid" 
-                                : "Coupon Not Valid"}
-                            </h3>
+                          <div className="flex items-center justify-between mb-4">
+                            <div className="flex items-center">
+                              {getStatusIcon(validityStatus)}
+                              <h3 className="text-lg font-semibold">
+                                {validityStatus === 'valid' 
+                                  ? "Coupon Valid" 
+                                  : "Coupon Not Valid"}
+                              </h3>
+                            </div>
+                            {/* WhatsApp button for valid coupons */}
+                            {validityStatus === 'valid' && (
+                              <Button 
+                                variant="ghost"
+                                onClick={handleWhatsAppShare}
+                                className="text-green-600 hover:bg-green-100"
+                              >
+                                <MessageCircle className="w-5 h-5 mr-2" />
+                                Contact via WhatsApp
+                              </Button>
+                            )}
                           </div>
                           <div className="grid gap-3 text-sm">
                             <div className="flex justify-between">
@@ -342,6 +360,7 @@ const CouponVerification = () => {
                 <li>• Valid coupons will show discount percentage and validity period</li>
                 <li>• Each coupon can only be used once</li>
                 <li>• Coupons are valid only within the specified dates</li>
+                <li>• For valid coupons, use the WhatsApp button to contact us</li>
               </ul>
             </CardContent>
           </Card>
