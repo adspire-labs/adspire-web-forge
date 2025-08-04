@@ -217,16 +217,16 @@ const Chatbot = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-2rem)]">
-      <Card className="bg-background border border-border shadow-2xl animate-scale-in text-foreground">
+      <Card className="bg-card border border-border shadow-2xl animate-scale-in">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b bg-primary text-primary-foreground rounded-t-lg">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-primary-foreground/20 rounded-full flex items-center justify-center">
-              <Bot className="w-4 h-4" />
+              <Bot className="w-4 h-4 text-primary-foreground" />
             </div>
             <div>
-              <h3 className="font-medium">Adspire Labs Assistant</h3>
-              <p className="text-xs opacity-90">We're here to help!</p>
+              <h3 className="font-medium text-primary-foreground">Adspire Labs Assistant</h3>
+              <p className="text-xs opacity-90 text-primary-foreground">We're here to help!</p>
             </div>
           </div>
           <Button
@@ -255,7 +255,7 @@ const Chatbot = () => {
                       <div className={`p-3 rounded-lg ${
                         message.sender === 'user'
                           ? 'bg-primary text-primary-foreground'
-                          : 'bg-muted text-muted-foreground'
+                          : 'bg-secondary/10 text-card-foreground border border-border'
                       }`}>
                         <p className="text-sm">{message.text}</p>
                       </div>
@@ -269,7 +269,7 @@ const Chatbot = () => {
                               variant="outline"
                               size="sm"
                               onClick={() => handleOptionClick(option)}
-                              className="w-full text-left justify-start text-xs hover:bg-muted/50 text-foreground"
+                              className="w-full text-left justify-start text-xs hover:bg-primary/10 text-card-foreground border-border"
                             >
                               {option}
                             </Button>
@@ -298,11 +298,11 @@ const Chatbot = () => {
                   <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Bot className="w-3 h-3 text-primary" />
                   </div>
-                  <div className="bg-muted text-muted-foreground p-3 rounded-lg">
+                  <div className="bg-secondary/10 text-card-foreground p-3 rounded-lg border border-border">
                     <div className="flex gap-1">
-                      <div className="w-2 h-2 bg-muted-foreground/60 rounded-full animate-pulse"></div>
-                      <div className="w-2 h-2 bg-muted-foreground/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                      <div className="w-2 h-2 bg-muted-foreground/60 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
                     </div>
                   </div>
                 </div>
@@ -319,12 +319,13 @@ const Chatbot = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 placeholder="Type your message..."
-                className="flex-1"
+                className="flex-1 bg-card text-card-foreground border-border"
               />
               <Button 
                 onClick={() => handleSendMessage()}
                 disabled={!inputValue.trim()}
                 size="sm"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 <Send className="w-4 h-4" />
               </Button>
