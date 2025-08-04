@@ -217,7 +217,7 @@ const Chatbot = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-2rem)]">
-      <Card className="bg-card border border-border shadow-2xl animate-scale-in">
+      <Card className="bg-card border border-border shadow-2xl">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b bg-primary text-primary-foreground rounded-t-lg">
           <div className="flex items-center gap-3">
@@ -243,7 +243,7 @@ const Chatbot = () => {
         <CardContent className="p-0">
           <div className="h-80 overflow-y-auto p-4 space-y-4">
             {messages.map((message) => (
-              <div key={message.id} className="animate-fade-in">
+              <div key={message.id} className="fade-in">
                 <div className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                   <div className="flex items-start gap-2 max-w-[80%]">
                     {message.sender === 'bot' && (
@@ -255,7 +255,7 @@ const Chatbot = () => {
                       <div className={`p-3 rounded-lg ${
                         message.sender === 'user'
                           ? 'bg-primary text-primary-foreground'
-                          : 'bg-secondary/10 text-card-foreground border border-border'
+                          : 'bg-secondary/10 text-foreground border border-border'
                       }`}>
                         <p className="text-sm">{message.text}</p>
                       </div>
@@ -269,7 +269,7 @@ const Chatbot = () => {
                               variant="outline"
                               size="sm"
                               onClick={() => handleOptionClick(option)}
-                              className="w-full text-left justify-start text-xs hover:bg-primary/10 text-card-foreground border-border"
+                              className="w-full text-left justify-start text-xs hover:bg-primary/10 text-foreground border-border"
                             >
                               {option}
                             </Button>
@@ -293,12 +293,12 @@ const Chatbot = () => {
             
             {/* Typing indicator */}
             {isTyping && (
-              <div className="flex justify-start animate-fade-in">
+              <div className="flex justify-start fade-in">
                 <div className="flex items-start gap-2">
                   <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Bot className="w-3 h-3 text-primary" />
                   </div>
-                  <div className="bg-secondary/10 text-card-foreground p-3 rounded-lg border border-border">
+                  <div className="bg-secondary/10 text-foreground p-3 rounded-lg border border-border">
                     <div className="flex gap-1">
                       <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                       <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
@@ -319,7 +319,7 @@ const Chatbot = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 placeholder="Type your message..."
-                className="flex-1 bg-card text-card-foreground border-border"
+                className="flex-1 bg-card text-foreground border-border"
               />
               <Button 
                 onClick={() => handleSendMessage()}
