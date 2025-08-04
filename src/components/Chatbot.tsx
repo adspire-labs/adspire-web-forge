@@ -217,7 +217,7 @@ const Chatbot = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-2rem)]">
-      <Card className="bg-background border shadow-2xl animate-scale-in">
+      <Card className="bg-background border border-border shadow-2xl animate-scale-in text-foreground">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b bg-primary text-primary-foreground rounded-t-lg">
           <div className="flex items-center gap-3">
