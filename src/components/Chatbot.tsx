@@ -255,7 +255,7 @@ const Chatbot = () => {
                       <div className={`p-3 rounded-lg ${
                         message.sender === 'user'
                           ? 'bg-primary text-primary-foreground'
-                          : 'bg-muted'
+                          : 'bg-muted text-muted-foreground'
                       }`}>
                         <p className="text-sm">{message.text}</p>
                       </div>
@@ -269,7 +269,7 @@ const Chatbot = () => {
                               variant="outline"
                               size="sm"
                               onClick={() => handleOptionClick(option)}
-                              className="w-full text-left justify-start text-xs hover:bg-muted/50"
+                              className="w-full text-left justify-start text-xs hover:bg-muted/50 text-foreground"
                             >
                               {option}
                             </Button>
@@ -298,7 +298,7 @@ const Chatbot = () => {
                   <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Bot className="w-3 h-3 text-primary" />
                   </div>
-                  <div className="bg-muted p-3 rounded-lg">
+                  <div className="bg-muted text-muted-foreground p-3 rounded-lg">
                     <div className="flex gap-1">
                       <div className="w-2 h-2 bg-muted-foreground/60 rounded-full animate-pulse"></div>
                       <div className="w-2 h-2 bg-muted-foreground/60 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
