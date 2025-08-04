@@ -50,7 +50,7 @@
     }
   ],
   "defaultResponses": {
-    "welcome": "Hi! I'm here to help. Select a question below or type keywords like 'services', 'location', 'courses', etc.",
+    "welcome": "Hi! I'm Riya. How Can I help you?",
     "notFound": "I didn't understand that. Please try asking about our services, location, courses, pricing, or click 'Talk to a person' for direct assistance.",
     "talkToPerson": "I'd like to connect you with our team! Choose your preferred method below:"
   }

@@ -41,7 +41,6 @@ const Chatbot = () => {
       // Add welcome message when chatbot first opens
       addBotMessage(faqData.defaultResponses.welcome, true, [
         "What are your services?",
-        "Where are you located?",
         "Do you offer courses?",
         "How can I contact you?",
         "Talk to a person"
