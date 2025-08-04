@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import Chatbot from "./components/Chatbot";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -47,6 +48,7 @@ const App = () => (
               </Routes>
             </main>
             <Footer />
+            <Chatbot />
           </div>
         </BrowserRouter>
       </TooltipProvider>

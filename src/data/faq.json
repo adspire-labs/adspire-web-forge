@@ -1,0 +1,57 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "keywords": ["services", "what do you do", "what services", "offerings"],
+      "question": "What are your services?",
+      "answer": "We offer Web Development, Digital Marketing, Graphic Design, and Video Production services. We help businesses create stunning websites, boost their online presence, design compelling visuals, and produce engaging video content."
+    },
+    {
+      "id": 2,
+      "keywords": ["location", "where", "address", "office"],
+      "question": "Where are you located?",
+      "answer": "We are located in Kathmandu, Nepal. You can contact us through our website or reach out directly for more specific location details."
+    },
+    {
+      "id": 3,
+      "keywords": ["contact", "phone", "email", "reach"],
+      "question": "How can I contact you?",
+      "answer": "You can contact us through our contact page on the website, or click 'Talk to a person' below to connect via Facebook Messenger or WhatsApp for immediate assistance."
+    },
+    {
+      "id": 4,
+      "keywords": ["courses", "training", "learn", "education"],
+      "question": "Do you offer courses?",
+      "answer": "Yes! We offer various courses including Digital Marketing, Web Development, Graphic Design, and Video Production. Check our Courses section for detailed information and enrollment."
+    },
+    {
+      "id": 5,
+      "keywords": ["pricing", "cost", "price", "how much"],
+      "question": "What are your pricing plans?",
+      "answer": "Our pricing varies based on the service and project requirements. Please contact us for a custom quote tailored to your specific needs."
+    },
+    {
+      "id": 6,
+      "keywords": ["portfolio", "work", "examples", "projects"],
+      "question": "Can I see your previous work?",
+      "answer": "Absolutely! You can check our Portfolio section to see examples of our work across web development, digital marketing, graphic design, and video production."
+    },
+    {
+      "id": 7,
+      "keywords": ["time", "duration", "how long", "timeline"],
+      "question": "How long does a project take?",
+      "answer": "Project timelines vary depending on complexity and scope. Simple websites may take 1-2 weeks, while complex projects can take several months. We'll provide a detailed timeline during consultation."
+    },
+    {
+      "id": 8,
+      "keywords": ["payment", "methods", "pay", "billing"],
+      "question": "What payment methods do you accept?",
+      "answer": "We accept various payment methods including bank transfers, online payments, and digital wallets. Payment terms will be discussed during project initiation."
+    }
+  ],
+  "defaultResponses": {
+    "welcome": "Hi! I'm here to help. Select a question below or type keywords like 'services', 'location', 'courses', etc.",
+    "notFound": "I didn't understand that. Please try asking about our services, location, courses, pricing, or click 'Talk to a person' for direct assistance.",
+    "talkToPerson": "I'd like to connect you with our team! Choose your preferred method below:"
+  }
+}

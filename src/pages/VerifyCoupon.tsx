@@ -34,7 +34,7 @@ const CouponVerification = () => {
       coupon => coupon.couponCode.toLowerCase() === couponCode.toLowerCase()
     );
     
-    setSearchResult(found || null);
+    setSearchResult(found as Coupon || null);
     setIsSearched(true);
     setIsLoading(false);
   };
