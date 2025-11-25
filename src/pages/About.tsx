@@ -84,10 +84,10 @@ const About = () => {
       image: "/partners/odg.png" // Path to partner image
     },
     {
-      name: "Samragyee Nirman Sewa",
+      name: "Butwal Construction and Builders",
       description: "Construction services with a focus on quality and sustainability",
       category: "Business",
-      image: "/partners/sns.png" // Path to partner image
+      image: "/partners/bcb.png" // Path to partner image
     }
   ];
 
